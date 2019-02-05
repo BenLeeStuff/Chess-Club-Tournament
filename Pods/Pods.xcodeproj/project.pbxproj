@@ -1,0 +1,949 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03050CDA63438D43FE6110258F74337E /* Pods-Chess Club TournamentUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AC5C26A09DE077E2D395A161C2EC41 /* Pods-Chess Club TournamentUITests-dummy.m */; };
+		11520A9E467537BCE0F3D30ACA29E1FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		1AE2227F226B7634DBBBB172A5DEC839 /* Pods-Chess Club TournamentTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D09F2909FE81AB72ADBEB964AE5D10 /* Pods-Chess Club TournamentTests-dummy.m */; };
+		1D9E3BB5982070E431F9A567E11A6C9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		296C865A28666FAF692E86A8EE972D4F /* SimpleAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8BCE8E753196B132BFFD9FC8578F07 /* SimpleAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A24EB0FDCAF4BD385C5F58E2301ED43 /* UIView+SimpleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4BFFD724A1EC7FB8333E40E14212 /* UIView+SimpleAnimation.swift */; };
+		3A4DEE381639D409046AD039E0468A25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		3B2FFA55A2FC8D61FD415BED79F0A953 /* Pods-Chess Club TournamentTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CADBCAB89C11397734E548D86DF569C /* Pods-Chess Club TournamentTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F943BA5A4F2B89FEBC8AD72E0C19B9B /* SimpleAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C8E17DBAF7BBB77725392183A96C1 /* SimpleAnimation-dummy.m */; };
+		7851B23D9A3F84E39DB1E0E6F83CEB20 /* Pods-Chess Club TournamentUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C6888EE630DEA7A925E2F2D8ACFACE /* Pods-Chess Club TournamentUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8484B143EFB73A260409ABAE919A36E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		A97FE3D10C7097625B1B91A1BECD05DC /* Pods-Chess Club Tournament-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 414CE640E2CF544DCBB51C8A5E617188 /* Pods-Chess Club Tournament-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE7F5771CB60722A519096B0F8128DFA /* Pods-Chess Club Tournament-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACDD097053179474D9D87FE1B6FD709 /* Pods-Chess Club Tournament-dummy.m */; };
+		F5CC236D88917FC2F144CF6865ECB3EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E404AA6957590324067E330E0EC533 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11840BA97FDD8D6BF2198E639E7E3B06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45471C06165E30ADFA1529DB3C7EE4B3;
+			remoteInfo = SimpleAnimation;
+		};
+		4142B8B517EB041E1FC4606662868930 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36D75962957863B6679F8990456439A8;
+			remoteInfo = "Pods-Chess Club Tournament";
+		};
+		E2CF72B200AFC5C2A2BB5D8A58B13A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36D75962957863B6679F8990456439A8;
+			remoteInfo = "Pods-Chess Club Tournament";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05FA981C33D11611F386B4480E264F30 /* Pods-Chess Club TournamentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chess Club TournamentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C7C1BC16A5170C0B040A436B037556F /* Pods-Chess Club TournamentUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chess Club TournamentUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0D34FEAA695F0A58EC9EF7346F51E465 /* SimpleAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAnimation-prefix.pch"; sourceTree = "<group>"; };
+		0E8039BE053324850246DC8F64795073 /* SimpleAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleAnimation.xcconfig; sourceTree = "<group>"; };
+		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2F859B86BB7F2BD65EC4413C9C03BF42 /* Pods-Chess Club TournamentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chess Club TournamentTests.release.xcconfig"; sourceTree = "<group>"; };
+		3B2ED4BB75E01374FAB20479AF0CAB59 /* Pods-Chess Club Tournament.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Chess Club Tournament.modulemap"; sourceTree = "<group>"; };
+		3B9333C663655FB146A55337130D2698 /* Pods-Chess Club TournamentTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Chess Club TournamentTests.modulemap"; sourceTree = "<group>"; };
+		3FB185A8CC69418D11FB7B7F25031CF1 /* Pods-Chess Club TournamentTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chess Club TournamentTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		400BC5E369754B950DCC9AA6FD43FAE4 /* Pods-Chess Club Tournament-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chess Club Tournament-acknowledgements.plist"; sourceTree = "<group>"; };
+		414CE640E2CF544DCBB51C8A5E617188 /* Pods-Chess Club Tournament-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chess Club Tournament-umbrella.h"; sourceTree = "<group>"; };
+		47D837C862CDD77644EA310EF1830A48 /* Pods-Chess Club TournamentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chess Club TournamentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D9D4BFFD724A1EC7FB8333E40E14212 /* UIView+SimpleAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+SimpleAnimation.swift"; path = "Source/UIView+SimpleAnimation.swift"; sourceTree = "<group>"; };
+		51B9BCC0B9025859AF259646BBE69487 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54C1350FE27D163C9BA3D88DB29BB190 /* Pods-Chess Club TournamentUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chess Club TournamentUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5B717C2FFB9E46C60B6D312803F80C8E /* Pods-Chess Club Tournament.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chess Club Tournament.release.xcconfig"; sourceTree = "<group>"; };
+		68D4067BBA76FFFEFD731DF9F0B7C729 /* Pods_Chess_Club_TournamentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Chess_Club_TournamentUITests.framework; path = "Pods-Chess Club TournamentUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF57D426D5CDBAC2BAC538C144FB9F5 /* Pods-Chess Club Tournament-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chess Club Tournament-resources.sh"; sourceTree = "<group>"; };
+		6F52CBD87C601BAE1DC1CDAA441A82B2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7458FE9ACC24A19C73823A2CE59DF0A5 /* Pods-Chess Club Tournament-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chess Club Tournament-frameworks.sh"; sourceTree = "<group>"; };
+		74E404AA6957590324067E330E0EC533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		76C670E39F0DBC6FD11F61FFBB94E608 /* Pods-Chess Club TournamentUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Chess Club TournamentUITests.modulemap"; sourceTree = "<group>"; };
+		779DFEA0ECC487FE80BD16082CF52195 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ACDD097053179474D9D87FE1B6FD709 /* Pods-Chess Club Tournament-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chess Club Tournament-dummy.m"; sourceTree = "<group>"; };
+		7F1C8E17DBAF7BBB77725392183A96C1 /* SimpleAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleAnimation-dummy.m"; sourceTree = "<group>"; };
+		82C6888EE630DEA7A925E2F2D8ACFACE /* Pods-Chess Club TournamentUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chess Club TournamentUITests-umbrella.h"; sourceTree = "<group>"; };
+		82CEE2E1F555BD873157BE26E423AD5A /* Pods-Chess Club Tournament.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chess Club Tournament.debug.xcconfig"; sourceTree = "<group>"; };
+		8C8BCE8E753196B132BFFD9FC8578F07 /* SimpleAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleAnimation-umbrella.h"; sourceTree = "<group>"; };
+		8CADBCAB89C11397734E548D86DF569C /* Pods-Chess Club TournamentTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Chess Club TournamentTests-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C97C779D267F6836D4E6059C6E7E639 /* Pods-Chess Club TournamentTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Chess Club TournamentTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9FE539E447CB40CBFF8EE92264EC2994 /* SimpleAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SimpleAnimation.modulemap; sourceTree = "<group>"; };
+		A098600DAF9BBDA218A90011EE9E71A7 /* Pods-Chess Club TournamentUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chess Club TournamentUITests-frameworks.sh"; sourceTree = "<group>"; };
+		A3D09F2909FE81AB72ADBEB964AE5D10 /* Pods-Chess Club TournamentTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chess Club TournamentTests-dummy.m"; sourceTree = "<group>"; };
+		A4031C5507DA00724C4E7046BA734D65 /* Pods-Chess Club Tournament-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Chess Club Tournament-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B6BA09B360F72B1F7F9E0A89BEBE23E7 /* Pods_Chess_Club_TournamentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Chess_Club_TournamentTests.framework; path = "Pods-Chess Club TournamentTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C783314BD2B2F1FB8D8442E77CA9D846 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C983D9DA5F666AA62600902A93177528 /* Pods-Chess Club TournamentTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chess Club TournamentTests-frameworks.sh"; sourceTree = "<group>"; };
+		D16E94F6929F0C0F381D2917C7C4C6DD /* Pods-Chess Club TournamentTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chess Club TournamentTests-resources.sh"; sourceTree = "<group>"; };
+		D258FD667699282C1DAC38742EC59841 /* SimpleAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimpleAnimation.framework; path = SimpleAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D636A901CB987CBA9C230EFD4916C1D5 /* Pods-Chess Club TournamentUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Chess Club TournamentUITests-resources.sh"; sourceTree = "<group>"; };
+		D7B57C5FEFF71554C27889C343ECAFAF /* Pods_Chess_Club_Tournament.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Chess_Club_Tournament.framework; path = "Pods-Chess Club Tournament.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE6908E142E8FF2116AA3536418D983E /* Pods-Chess Club TournamentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Chess Club TournamentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E9AC5C26A09DE077E2D395A161C2EC41 /* Pods-Chess Club TournamentUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Chess Club TournamentUITests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		065E76C8CAF4F5BF0A26A92F0D6A242C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11520A9E467537BCE0F3D30ACA29E1FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CB41647631C362FB3394722F31FF701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4DEE381639D409046AD039E0468A25 /* Foundation.framework in Frameworks */,
+				F5CC236D88917FC2F144CF6865ECB3EC /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE59C14852424A7D0239082CDCA5E9F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D9E3BB5982070E431F9A567E11A6C9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C851C0A0231EFEC732046A30355D34E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8484B143EFB73A260409ABAE919A36E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06CDD10DE71306278CF89108B3036DFD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */,
+				74E404AA6957590324067E330E0EC533 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		0B0AE70388A00F50F1AEA830500F02C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51B9BCC0B9025859AF259646BBE69487 /* Info.plist */,
+				9FE539E447CB40CBFF8EE92264EC2994 /* SimpleAnimation.modulemap */,
+				0E8039BE053324850246DC8F64795073 /* SimpleAnimation.xcconfig */,
+				7F1C8E17DBAF7BBB77725392183A96C1 /* SimpleAnimation-dummy.m */,
+				0D34FEAA695F0A58EC9EF7346F51E465 /* SimpleAnimation-prefix.pch */,
+				8C8BCE8E753196B132BFFD9FC8578F07 /* SimpleAnimation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SimpleAnimation";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06CDD10DE71306278CF89108B3036DFD /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CC4A572B1F9249855D02313B6228A18 /* SimpleAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D4BFFD724A1EC7FB8333E40E14212 /* UIView+SimpleAnimation.swift */,
+				0B0AE70388A00F50F1AEA830500F02C8 /* Support Files */,
+			);
+			name = SimpleAnimation;
+			path = SimpleAnimation;
+			sourceTree = "<group>";
+		};
+		6BAE7750BEE7C6B731158840C9CAC689 /* Pods-Chess Club TournamentTests */ = {
+			isa = PBXGroup;
+			children = (
+				C783314BD2B2F1FB8D8442E77CA9D846 /* Info.plist */,
+				3B9333C663655FB146A55337130D2698 /* Pods-Chess Club TournamentTests.modulemap */,
+				3FB185A8CC69418D11FB7B7F25031CF1 /* Pods-Chess Club TournamentTests-acknowledgements.markdown */,
+				9C97C779D267F6836D4E6059C6E7E639 /* Pods-Chess Club TournamentTests-acknowledgements.plist */,
+				A3D09F2909FE81AB72ADBEB964AE5D10 /* Pods-Chess Club TournamentTests-dummy.m */,
+				C983D9DA5F666AA62600902A93177528 /* Pods-Chess Club TournamentTests-frameworks.sh */,
+				D16E94F6929F0C0F381D2917C7C4C6DD /* Pods-Chess Club TournamentTests-resources.sh */,
+				8CADBCAB89C11397734E548D86DF569C /* Pods-Chess Club TournamentTests-umbrella.h */,
+				47D837C862CDD77644EA310EF1830A48 /* Pods-Chess Club TournamentTests.debug.xcconfig */,
+				2F859B86BB7F2BD65EC4413C9C03BF42 /* Pods-Chess Club TournamentTests.release.xcconfig */,
+			);
+			name = "Pods-Chess Club TournamentTests";
+			path = "Target Support Files/Pods-Chess Club TournamentTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F057DD2ED4462DFD960BD3762CA938FC /* Pods */,
+				D99790D56F88E1E7F435C4BDDCBEC9DA /* Products */,
+				FB9CF294EEBBC08539D4A45F4526A482 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A2CA738E68709D8643A01A7843F41207 /* Pods-Chess Club Tournament */ = {
+			isa = PBXGroup;
+			children = (
+				6F52CBD87C601BAE1DC1CDAA441A82B2 /* Info.plist */,
+				3B2ED4BB75E01374FAB20479AF0CAB59 /* Pods-Chess Club Tournament.modulemap */,
+				A4031C5507DA00724C4E7046BA734D65 /* Pods-Chess Club Tournament-acknowledgements.markdown */,
+				400BC5E369754B950DCC9AA6FD43FAE4 /* Pods-Chess Club Tournament-acknowledgements.plist */,
+				7ACDD097053179474D9D87FE1B6FD709 /* Pods-Chess Club Tournament-dummy.m */,
+				7458FE9ACC24A19C73823A2CE59DF0A5 /* Pods-Chess Club Tournament-frameworks.sh */,
+				6EF57D426D5CDBAC2BAC538C144FB9F5 /* Pods-Chess Club Tournament-resources.sh */,
+				414CE640E2CF544DCBB51C8A5E617188 /* Pods-Chess Club Tournament-umbrella.h */,
+				82CEE2E1F555BD873157BE26E423AD5A /* Pods-Chess Club Tournament.debug.xcconfig */,
+				5B717C2FFB9E46C60B6D312803F80C8E /* Pods-Chess Club Tournament.release.xcconfig */,
+			);
+			name = "Pods-Chess Club Tournament";
+			path = "Target Support Files/Pods-Chess Club Tournament";
+			sourceTree = "<group>";
+		};
+		CCD59206C4867F70876607ADB948CBD5 /* Pods-Chess Club TournamentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				779DFEA0ECC487FE80BD16082CF52195 /* Info.plist */,
+				76C670E39F0DBC6FD11F61FFBB94E608 /* Pods-Chess Club TournamentUITests.modulemap */,
+				54C1350FE27D163C9BA3D88DB29BB190 /* Pods-Chess Club TournamentUITests-acknowledgements.markdown */,
+				0C7C1BC16A5170C0B040A436B037556F /* Pods-Chess Club TournamentUITests-acknowledgements.plist */,
+				E9AC5C26A09DE077E2D395A161C2EC41 /* Pods-Chess Club TournamentUITests-dummy.m */,
+				A098600DAF9BBDA218A90011EE9E71A7 /* Pods-Chess Club TournamentUITests-frameworks.sh */,
+				D636A901CB987CBA9C230EFD4916C1D5 /* Pods-Chess Club TournamentUITests-resources.sh */,
+				82C6888EE630DEA7A925E2F2D8ACFACE /* Pods-Chess Club TournamentUITests-umbrella.h */,
+				05FA981C33D11611F386B4480E264F30 /* Pods-Chess Club TournamentUITests.debug.xcconfig */,
+				DE6908E142E8FF2116AA3536418D983E /* Pods-Chess Club TournamentUITests.release.xcconfig */,
+			);
+			name = "Pods-Chess Club TournamentUITests";
+			path = "Target Support Files/Pods-Chess Club TournamentUITests";
+			sourceTree = "<group>";
+		};
+		D99790D56F88E1E7F435C4BDDCBEC9DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7B57C5FEFF71554C27889C343ECAFAF /* Pods_Chess_Club_Tournament.framework */,
+				B6BA09B360F72B1F7F9E0A89BEBE23E7 /* Pods_Chess_Club_TournamentTests.framework */,
+				68D4067BBA76FFFEFD731DF9F0B7C729 /* Pods_Chess_Club_TournamentUITests.framework */,
+				D258FD667699282C1DAC38742EC59841 /* SimpleAnimation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F057DD2ED4462DFD960BD3762CA938FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CC4A572B1F9249855D02313B6228A18 /* SimpleAnimation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB9CF294EEBBC08539D4A45F4526A482 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2CA738E68709D8643A01A7843F41207 /* Pods-Chess Club Tournament */,
+				6BAE7750BEE7C6B731158840C9CAC689 /* Pods-Chess Club TournamentTests */,
+				CCD59206C4867F70876607ADB948CBD5 /* Pods-Chess Club TournamentUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		39ED4BFFA5B6DEC9B66B912D23A082C5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				296C865A28666FAF692E86A8EE972D4F /* SimpleAnimation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4113983DEF9CDFC6DD6975F83F5BFA64 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A97FE3D10C7097625B1B91A1BECD05DC /* Pods-Chess Club Tournament-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDC7205C3794BF855B2ADD0254F4B588 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7851B23D9A3F84E39DB1E0E6F83CEB20 /* Pods-Chess Club TournamentUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEFDCADEFF85BC08B3DFFC8300E7E6AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2FFA55A2FC8D61FD415BED79F0A953 /* Pods-Chess Club TournamentTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		36D75962957863B6679F8990456439A8 /* Pods-Chess Club Tournament */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11BB43D06527A397133982A24A9FA6E6 /* Build configuration list for PBXNativeTarget "Pods-Chess Club Tournament" */;
+			buildPhases = (
+				4113983DEF9CDFC6DD6975F83F5BFA64 /* Headers */,
+				DFD2285BBFAB3828BAE838A20BBA8498 /* Sources */,
+				065E76C8CAF4F5BF0A26A92F0D6A242C /* Frameworks */,
+				2996BFFDA5FC1AC81FAE7C048829C0F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5469B9E977846905CDC73678AC4AD90 /* PBXTargetDependency */,
+			);
+			name = "Pods-Chess Club Tournament";
+			productName = "Pods-Chess Club Tournament";
+			productReference = D7B57C5FEFF71554C27889C343ECAFAF /* Pods_Chess_Club_Tournament.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		45471C06165E30ADFA1529DB3C7EE4B3 /* SimpleAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CAE748EFF3DECA02A9BF3527C1CB99E /* Build configuration list for PBXNativeTarget "SimpleAnimation" */;
+			buildPhases = (
+				39ED4BFFA5B6DEC9B66B912D23A082C5 /* Headers */,
+				126BEAA93D426A5F3ECB75835E2B1DC2 /* Sources */,
+				0CB41647631C362FB3394722F31FF701 /* Frameworks */,
+				5A64578E4053B05AF33E47EAAA4385DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleAnimation;
+			productName = SimpleAnimation;
+			productReference = D258FD667699282C1DAC38742EC59841 /* SimpleAnimation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2BE6DFDE0B3D997F250851ACFA5921E /* Pods-Chess Club TournamentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 121137086C3D1AE5476C38926C658AE6 /* Build configuration list for PBXNativeTarget "Pods-Chess Club TournamentUITests" */;
+			buildPhases = (
+				DDC7205C3794BF855B2ADD0254F4B588 /* Headers */,
+				174E38023123E88AA35E2B74CBB7929B /* Sources */,
+				AE59C14852424A7D0239082CDCA5E9F2 /* Frameworks */,
+				8A455694C4D370282F2664A3A1EBFCA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				380FD3F0B04F3D88FFF06E26BEB79E92 /* PBXTargetDependency */,
+			);
+			name = "Pods-Chess Club TournamentUITests";
+			productName = "Pods-Chess Club TournamentUITests";
+			productReference = 68D4067BBA76FFFEFD731DF9F0B7C729 /* Pods_Chess_Club_TournamentUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FFCC58B41AE1647BCDB179A87B220337 /* Pods-Chess Club TournamentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F31A37AFF16952946273898318B8CFF /* Build configuration list for PBXNativeTarget "Pods-Chess Club TournamentTests" */;
+			buildPhases = (
+				EEFDCADEFF85BC08B3DFFC8300E7E6AA /* Headers */,
+				0D57401D530AF7204D453889E6300CFA /* Sources */,
+				C851C0A0231EFEC732046A30355D34E5 /* Frameworks */,
+				668BED2FA027E5438CADE0D81BE74882 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64E5E6F526ED65230229F48401E07361 /* PBXTargetDependency */,
+			);
+			name = "Pods-Chess Club TournamentTests";
+			productName = "Pods-Chess Club TournamentTests";
+			productReference = B6BA09B360F72B1F7F9E0A89BEBE23E7 /* Pods_Chess_Club_TournamentTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D99790D56F88E1E7F435C4BDDCBEC9DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36D75962957863B6679F8990456439A8 /* Pods-Chess Club Tournament */,
+				FFCC58B41AE1647BCDB179A87B220337 /* Pods-Chess Club TournamentTests */,
+				A2BE6DFDE0B3D997F250851ACFA5921E /* Pods-Chess Club TournamentUITests */,
+				45471C06165E30ADFA1529DB3C7EE4B3 /* SimpleAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2996BFFDA5FC1AC81FAE7C048829C0F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A64578E4053B05AF33E47EAAA4385DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		668BED2FA027E5438CADE0D81BE74882 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A455694C4D370282F2664A3A1EBFCA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D57401D530AF7204D453889E6300CFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AE2227F226B7634DBBBB172A5DEC839 /* Pods-Chess Club TournamentTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		126BEAA93D426A5F3ECB75835E2B1DC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F943BA5A4F2B89FEBC8AD72E0C19B9B /* SimpleAnimation-dummy.m in Sources */,
+				2A24EB0FDCAF4BD385C5F58E2301ED43 /* UIView+SimpleAnimation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174E38023123E88AA35E2B74CBB7929B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03050CDA63438D43FE6110258F74337E /* Pods-Chess Club TournamentUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFD2285BBFAB3828BAE838A20BBA8498 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE7F5771CB60722A519096B0F8128DFA /* Pods-Chess Club Tournament-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		380FD3F0B04F3D88FFF06E26BEB79E92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Chess Club Tournament";
+			target = 36D75962957863B6679F8990456439A8 /* Pods-Chess Club Tournament */;
+			targetProxy = 4142B8B517EB041E1FC4606662868930 /* PBXContainerItemProxy */;
+		};
+		64E5E6F526ED65230229F48401E07361 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Chess Club Tournament";
+			target = 36D75962957863B6679F8990456439A8 /* Pods-Chess Club Tournament */;
+			targetProxy = E2CF72B200AFC5C2A2BB5D8A58B13A0B /* PBXContainerItemProxy */;
+		};
+		F5469B9E977846905CDC73678AC4AD90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleAnimation;
+			target = 45471C06165E30ADFA1529DB3C7EE4B3 /* SimpleAnimation */;
+			targetProxy = 11840BA97FDD8D6BF2198E639E7E3B06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1745DCBFFE2CC7550285AAEB95C0E119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B717C2FFB9E46C60B6D312803F80C8E /* Pods-Chess Club Tournament.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chess Club Tournament/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chess Club Tournament/Pods-Chess Club Tournament.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1B7256F66E315FEF29BFD345FF4BFF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8039BE053324850246DC8F64795073 /* SimpleAnimation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleAnimation/SimpleAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleAnimation/SimpleAnimation.modulemap";
+				PRODUCT_MODULE_NAME = SimpleAnimation;
+				PRODUCT_NAME = SimpleAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E7A231C7D36EB502FA2EEBBF84B029A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		4B0C5F4CC885874B3DD1A1CFBB7139FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6908E142E8FF2116AA3536418D983E /* Pods-Chess Club TournamentUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chess Club TournamentUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chess Club TournamentUITests/Pods-Chess Club TournamentUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8368C09A92BDC4D672F4A68B49BD9DA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F859B86BB7F2BD65EC4413C9C03BF42 /* Pods-Chess Club TournamentTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chess Club TournamentTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chess Club TournamentTests/Pods-Chess Club TournamentTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8716550BC11F7BEA523AD4BDBA876D5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		88B5CD92C7CAFFC107C70FDFE6FBCCF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D837C862CDD77644EA310EF1830A48 /* Pods-Chess Club TournamentTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chess Club TournamentTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chess Club TournamentTests/Pods-Chess Club TournamentTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		95B66A3DAD8BCDA076C3AE57C4261A00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05FA981C33D11611F386B4480E264F30 /* Pods-Chess Club TournamentUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chess Club TournamentUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chess Club TournamentUITests/Pods-Chess Club TournamentUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E6515541C920BD8F1DEC14A232E4BB3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8039BE053324850246DC8F64795073 /* SimpleAnimation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SimpleAnimation/SimpleAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SimpleAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SimpleAnimation/SimpleAnimation.modulemap";
+				PRODUCT_MODULE_NAME = SimpleAnimation;
+				PRODUCT_NAME = SimpleAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F518EA07DED44B5298D162842F7BCF35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CEE2E1F555BD873157BE26E423AD5A /* Pods-Chess Club Tournament.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Chess Club Tournament/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Chess Club Tournament/Pods-Chess Club Tournament.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11BB43D06527A397133982A24A9FA6E6 /* Build configuration list for PBXNativeTarget "Pods-Chess Club Tournament" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F518EA07DED44B5298D162842F7BCF35 /* Debug */,
+				1745DCBFFE2CC7550285AAEB95C0E119 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		121137086C3D1AE5476C38926C658AE6 /* Build configuration list for PBXNativeTarget "Pods-Chess Club TournamentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95B66A3DAD8BCDA076C3AE57C4261A00 /* Debug */,
+				4B0C5F4CC885874B3DD1A1CFBB7139FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CAE748EFF3DECA02A9BF3527C1CB99E /* Build configuration list for PBXNativeTarget "SimpleAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6515541C920BD8F1DEC14A232E4BB3B /* Debug */,
+				1B7256F66E315FEF29BFD345FF4BFF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8716550BC11F7BEA523AD4BDBA876D5D /* Debug */,
+				3E7A231C7D36EB502FA2EEBBF84B029A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F31A37AFF16952946273898318B8CFF /* Build configuration list for PBXNativeTarget "Pods-Chess Club TournamentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88B5CD92C7CAFFC107C70FDFE6FBCCF0 /* Debug */,
+				8368C09A92BDC4D672F4A68B49BD9DA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

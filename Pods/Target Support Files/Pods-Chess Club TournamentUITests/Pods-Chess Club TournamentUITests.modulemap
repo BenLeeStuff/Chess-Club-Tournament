@@ -1,0 +1,6 @@
+framework module Pods_Chess_Club_TournamentUITests {
+  umbrella header "Pods-Chess Club TournamentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,926 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		273A8C374640607340F9C053 /* Pods_Chess_Club_Tournament.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8677BDFDFB4D5A42E9912687 /* Pods_Chess_Club_Tournament.framework */; };
+		317C420BD5B2612208826774 /* Pods_Chess_Club_TournamentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBFFB2E8104ECE548ADA2C8 /* Pods_Chess_Club_TournamentTests.framework */; };
+		7814E45422019116005D4B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E45322019116005D4B79 /* AppDelegate.swift */; };
+		7814E45622019116005D4B79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E45522019116005D4B79 /* HomeViewController.swift */; };
+		7814E45922019116005D4B79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814E45722019116005D4B79 /* Main.storyboard */; };
+		7814E45B22019116005D4B79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7814E45A22019116005D4B79 /* Assets.xcassets */; };
+		7814E45E22019116005D4B79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7814E45C22019116005D4B79 /* LaunchScreen.storyboard */; };
+		7814E46922019116005D4B79 /* Chess_Club_TournamentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E46822019116005D4B79 /* Chess_Club_TournamentTests.swift */; };
+		7814E47422019116005D4B79 /* Chess_Club_TournamentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E47322019116005D4B79 /* Chess_Club_TournamentUITests.swift */; };
+		7814E4822201917C005D4B79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4812201917C005D4B79 /* Extensions.swift */; };
+		7814E48722019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E48622019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift */; };
+		7814E49B22019657005D4B79 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48922019655005D4B79 /* Roboto-Bold.ttf */; };
+		7814E49C22019657005D4B79 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48922019655005D4B79 /* Roboto-Bold.ttf */; };
+		7814E49D22019657005D4B79 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48922019655005D4B79 /* Roboto-Bold.ttf */; };
+		7814E49E22019657005D4B79 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48A22019655005D4B79 /* Roboto-BoldItalic.ttf */; };
+		7814E49F22019657005D4B79 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48A22019655005D4B79 /* Roboto-BoldItalic.ttf */; };
+		7814E4A022019657005D4B79 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48A22019655005D4B79 /* Roboto-BoldItalic.ttf */; };
+		7814E4A122019657005D4B79 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48B22019655005D4B79 /* Roboto-Light.ttf */; };
+		7814E4A222019657005D4B79 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48B22019655005D4B79 /* Roboto-Light.ttf */; };
+		7814E4A322019657005D4B79 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48B22019655005D4B79 /* Roboto-Light.ttf */; };
+		7814E4A422019657005D4B79 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48C22019656005D4B79 /* Roboto-Thin.ttf */; };
+		7814E4A522019657005D4B79 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48C22019656005D4B79 /* Roboto-Thin.ttf */; };
+		7814E4A622019657005D4B79 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48C22019656005D4B79 /* Roboto-Thin.ttf */; };
+		7814E4A722019657005D4B79 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48D22019656005D4B79 /* Roboto-Regular.ttf */; };
+		7814E4A822019657005D4B79 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48D22019656005D4B79 /* Roboto-Regular.ttf */; };
+		7814E4A922019657005D4B79 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48D22019656005D4B79 /* Roboto-Regular.ttf */; };
+		7814E4AA22019657005D4B79 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48E22019656005D4B79 /* Roboto-Italic.ttf */; };
+		7814E4AB22019657005D4B79 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48E22019656005D4B79 /* Roboto-Italic.ttf */; };
+		7814E4AC22019657005D4B79 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48E22019656005D4B79 /* Roboto-Italic.ttf */; };
+		7814E4AD22019657005D4B79 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48F22019656005D4B79 /* RobotoCondensed-Bold.ttf */; };
+		7814E4AE22019657005D4B79 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48F22019656005D4B79 /* RobotoCondensed-Bold.ttf */; };
+		7814E4AF22019657005D4B79 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E48F22019656005D4B79 /* RobotoCondensed-Bold.ttf */; };
+		7814E4B022019657005D4B79 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49022019656005D4B79 /* Roboto-Medium.ttf */; };
+		7814E4B122019657005D4B79 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49022019656005D4B79 /* Roboto-Medium.ttf */; };
+		7814E4B222019657005D4B79 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49022019656005D4B79 /* Roboto-Medium.ttf */; };
+		7814E4B322019657005D4B79 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49122019656005D4B79 /* RobotoCondensed-LightItalic.ttf */; };
+		7814E4B422019657005D4B79 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49122019656005D4B79 /* RobotoCondensed-LightItalic.ttf */; };
+		7814E4B522019657005D4B79 /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49122019656005D4B79 /* RobotoCondensed-LightItalic.ttf */; };
+		7814E4B622019657005D4B79 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49222019656005D4B79 /* Roboto-ThinItalic.ttf */; };
+		7814E4B722019657005D4B79 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49222019656005D4B79 /* Roboto-ThinItalic.ttf */; };
+		7814E4B822019657005D4B79 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49222019656005D4B79 /* Roboto-ThinItalic.ttf */; };
+		7814E4B922019657005D4B79 /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49322019656005D4B79 /* RobotoCondensed-BoldItalic.ttf */; };
+		7814E4BA22019657005D4B79 /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49322019656005D4B79 /* RobotoCondensed-BoldItalic.ttf */; };
+		7814E4BB22019657005D4B79 /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49322019656005D4B79 /* RobotoCondensed-BoldItalic.ttf */; };
+		7814E4BC22019657005D4B79 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49422019656005D4B79 /* RobotoCondensed-Light.ttf */; };
+		7814E4BD22019657005D4B79 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49422019656005D4B79 /* RobotoCondensed-Light.ttf */; };
+		7814E4BE22019657005D4B79 /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49422019656005D4B79 /* RobotoCondensed-Light.ttf */; };
+		7814E4BF22019657005D4B79 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49522019656005D4B79 /* RobotoCondensed-Italic.ttf */; };
+		7814E4C022019657005D4B79 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49522019656005D4B79 /* RobotoCondensed-Italic.ttf */; };
+		7814E4C122019657005D4B79 /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49522019656005D4B79 /* RobotoCondensed-Italic.ttf */; };
+		7814E4C222019657005D4B79 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49622019656005D4B79 /* Roboto-MediumItalic.ttf */; };
+		7814E4C322019657005D4B79 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49622019656005D4B79 /* Roboto-MediumItalic.ttf */; };
+		7814E4C422019657005D4B79 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49622019656005D4B79 /* Roboto-MediumItalic.ttf */; };
+		7814E4C522019657005D4B79 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49722019657005D4B79 /* Roboto-LightItalic.ttf */; };
+		7814E4C622019657005D4B79 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49722019657005D4B79 /* Roboto-LightItalic.ttf */; };
+		7814E4C722019657005D4B79 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49722019657005D4B79 /* Roboto-LightItalic.ttf */; };
+		7814E4C822019657005D4B79 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49822019657005D4B79 /* Roboto-Black.ttf */; };
+		7814E4C922019657005D4B79 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49822019657005D4B79 /* Roboto-Black.ttf */; };
+		7814E4CA22019657005D4B79 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49822019657005D4B79 /* Roboto-Black.ttf */; };
+		7814E4CB22019657005D4B79 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49922019657005D4B79 /* Roboto-BlackItalic.ttf */; };
+		7814E4CC22019657005D4B79 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49922019657005D4B79 /* Roboto-BlackItalic.ttf */; };
+		7814E4CD22019657005D4B79 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49922019657005D4B79 /* Roboto-BlackItalic.ttf */; };
+		7814E4CE22019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */; };
+		7814E4CF22019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */; };
+		7814E4D022019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */; };
+		7814E4D222019AB0005D4B79 /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D122019AB0005D4B79 /* AddPlayersViewController.swift */; };
+		7814E4D422019B31005D4B79 /* TournamentOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D322019B31005D4B79 /* TournamentOptionsViewController.swift */; };
+		7814E4D722019B6C005D4B79 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D622019B6C005D4B79 /* TextField.swift */; };
+		7814E4D922019E22005D4B79 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D822019E22005D4B79 /* Player.swift */; };
+		7814E4DB2201A6A9005D4B79 /* MatchPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4DA2201A6A9005D4B79 /* MatchPair.swift */; };
+		7814E4DD2201A7F1005D4B79 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4DC2201A7F1005D4B79 /* PlayerCollectionViewCell.swift */; };
+		7814E4DF2201A810005D4B79 /* NoPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4DE2201A810005D4B79 /* NoPlayerCollectionViewCell.swift */; };
+		7814E4E12201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E02201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift */; };
+		7814E4E52201B17C005D4B79 /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E42201B17C005D4B79 /* TournamentViewController.swift */; };
+		7814E4E72202CEC1005D4B79 /* MatchupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */; };
+		7814E4E92202D50F005D4B79 /* MatchupResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */; };
+		972665A525A0C242957C5B65 /* Pods_Chess_Club_TournamentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A7D28B71FDAEC17BD9CD38 /* Pods_Chess_Club_TournamentUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7814E46522019116005D4B79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7814E44822019116005D4B79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7814E44F22019116005D4B79;
+			remoteInfo = "Chess Club Tournament";
+		};
+		7814E47022019116005D4B79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7814E44822019116005D4B79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7814E44F22019116005D4B79;
+			remoteInfo = "Chess Club Tournament";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6324DCB1B70089448291520A /* Pods-Chess Club TournamentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess Club TournamentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chess Club TournamentUITests/Pods-Chess Club TournamentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7795C93179BB8A5317BF5EC7 /* Pods-Chess Club TournamentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess Club TournamentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chess Club TournamentTests/Pods-Chess Club TournamentTests.release.xcconfig"; sourceTree = "<group>"; };
+		7814E45022019116005D4B79 /* Chess Club Tournament.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chess Club Tournament.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814E45322019116005D4B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7814E45522019116005D4B79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7814E45822019116005D4B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7814E45A22019116005D4B79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7814E45D22019116005D4B79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7814E45F22019116005D4B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814E46422019116005D4B79 /* Chess Club TournamentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chess Club TournamentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814E46822019116005D4B79 /* Chess_Club_TournamentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chess_Club_TournamentTests.swift; sourceTree = "<group>"; };
+		7814E46A22019116005D4B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814E46F22019116005D4B79 /* Chess Club TournamentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chess Club TournamentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7814E47322019116005D4B79 /* Chess_Club_TournamentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chess_Club_TournamentUITests.swift; sourceTree = "<group>"; };
+		7814E47522019116005D4B79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7814E4812201917C005D4B79 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7814E48622019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRegularTournamentCollectionViewCell.swift; sourceTree = "<group>"; };
+		7814E48922019655005D4B79 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		7814E48A22019655005D4B79 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7814E48B22019655005D4B79 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		7814E48C22019656005D4B79 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		7814E48D22019656005D4B79 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		7814E48E22019656005D4B79 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		7814E48F22019656005D4B79 /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		7814E49022019656005D4B79 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		7814E49122019656005D4B79 /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		7814E49222019656005D4B79 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		7814E49322019656005D4B79 /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7814E49422019656005D4B79 /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		7814E49522019656005D4B79 /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		7814E49622019656005D4B79 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		7814E49722019657005D4B79 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		7814E49822019657005D4B79 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		7814E49922019657005D4B79 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		7814E4D122019AB0005D4B79 /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
+		7814E4D322019B31005D4B79 /* TournamentOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentOptionsViewController.swift; sourceTree = "<group>"; };
+		7814E4D622019B6C005D4B79 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		7814E4D822019E22005D4B79 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7814E4DA2201A6A9005D4B79 /* MatchPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPair.swift; sourceTree = "<group>"; };
+		7814E4DC2201A7F1005D4B79 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		7814E4DE2201A810005D4B79 /* NoPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		7814E4E02201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		7814E4E42201B17C005D4B79 /* TournamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
+		7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchupCollectionViewCell.swift; sourceTree = "<group>"; };
+		7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchupResultsViewController.swift; sourceTree = "<group>"; };
+		8677BDFDFB4D5A42E9912687 /* Pods_Chess_Club_Tournament.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Club_Tournament.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8703D63DBF977D9DCC98818B /* Pods-Chess Club TournamentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess Club TournamentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chess Club TournamentTests/Pods-Chess Club TournamentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8BBFFB2E8104ECE548ADA2C8 /* Pods_Chess_Club_TournamentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Club_TournamentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		938CCE79758D58B540765A6B /* Pods-Chess Club Tournament.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess Club Tournament.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chess Club Tournament/Pods-Chess Club Tournament.debug.xcconfig"; sourceTree = "<group>"; };
+		94A7D28B71FDAEC17BD9CD38 /* Pods_Chess_Club_TournamentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Club_TournamentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9721F0D473C2C8DA683FEB7C /* Pods-Chess Club Tournament.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess Club Tournament.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chess Club Tournament/Pods-Chess Club Tournament.release.xcconfig"; sourceTree = "<group>"; };
+		E76466FEE8B96293D18A397A /* Pods-Chess Club TournamentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess Club TournamentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chess Club TournamentUITests/Pods-Chess Club TournamentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7814E44D22019116005D4B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				273A8C374640607340F9C053 /* Pods_Chess_Club_Tournament.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814E46122019116005D4B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317C420BD5B2612208826774 /* Pods_Chess_Club_TournamentTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814E46C22019116005D4B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				972665A525A0C242957C5B65 /* Pods_Chess_Club_TournamentUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DE801E26588308FB5E6518E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8677BDFDFB4D5A42E9912687 /* Pods_Chess_Club_Tournament.framework */,
+				8BBFFB2E8104ECE548ADA2C8 /* Pods_Chess_Club_TournamentTests.framework */,
+				94A7D28B71FDAEC17BD9CD38 /* Pods_Chess_Club_TournamentUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7814E44722019116005D4B79 = {
+			isa = PBXGroup;
+			children = (
+				7814E45222019116005D4B79 /* Chess Club Tournament */,
+				7814E46722019116005D4B79 /* Chess Club TournamentTests */,
+				7814E47222019116005D4B79 /* Chess Club TournamentUITests */,
+				7814E45122019116005D4B79 /* Products */,
+				AEA23581AF32964F4F9821D6 /* Pods */,
+				4DE801E26588308FB5E6518E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7814E45122019116005D4B79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7814E45022019116005D4B79 /* Chess Club Tournament.app */,
+				7814E46422019116005D4B79 /* Chess Club TournamentTests.xctest */,
+				7814E46F22019116005D4B79 /* Chess Club TournamentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7814E45222019116005D4B79 /* Chess Club Tournament */ = {
+			isa = PBXGroup;
+			children = (
+				7814E45322019116005D4B79 /* AppDelegate.swift */,
+				7814E4D522019B5E005D4B79 /* DataModels */,
+				7814E4882201963E005D4B79 /* Fonts */,
+				7814E484220191FA005D4B79 /* CollectionViewCells */,
+				7814E483220191ED005D4B79 /* ViewControllers */,
+				7814E4812201917C005D4B79 /* Extensions.swift */,
+				7814E45722019116005D4B79 /* Main.storyboard */,
+				7814E45A22019116005D4B79 /* Assets.xcassets */,
+				7814E45C22019116005D4B79 /* LaunchScreen.storyboard */,
+				7814E45F22019116005D4B79 /* Info.plist */,
+			);
+			path = "Chess Club Tournament";
+			sourceTree = "<group>";
+		};
+		7814E46722019116005D4B79 /* Chess Club TournamentTests */ = {
+			isa = PBXGroup;
+			children = (
+				7814E46822019116005D4B79 /* Chess_Club_TournamentTests.swift */,
+				7814E46A22019116005D4B79 /* Info.plist */,
+			);
+			path = "Chess Club TournamentTests";
+			sourceTree = "<group>";
+		};
+		7814E47222019116005D4B79 /* Chess Club TournamentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7814E47322019116005D4B79 /* Chess_Club_TournamentUITests.swift */,
+				7814E47522019116005D4B79 /* Info.plist */,
+			);
+			path = "Chess Club TournamentUITests";
+			sourceTree = "<group>";
+		};
+		7814E483220191ED005D4B79 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7814E45522019116005D4B79 /* HomeViewController.swift */,
+				7814E4D322019B31005D4B79 /* TournamentOptionsViewController.swift */,
+				7814E4D122019AB0005D4B79 /* AddPlayersViewController.swift */,
+				7814E4E42201B17C005D4B79 /* TournamentViewController.swift */,
+				7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7814E484220191FA005D4B79 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7814E48622019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift */,
+				7814E4DC2201A7F1005D4B79 /* PlayerCollectionViewCell.swift */,
+				7814E4DE2201A810005D4B79 /* NoPlayerCollectionViewCell.swift */,
+				7814E4E02201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift */,
+				7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		7814E4882201963E005D4B79 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7814E49822019657005D4B79 /* Roboto-Black.ttf */,
+				7814E49922019657005D4B79 /* Roboto-BlackItalic.ttf */,
+				7814E48922019655005D4B79 /* Roboto-Bold.ttf */,
+				7814E48A22019655005D4B79 /* Roboto-BoldItalic.ttf */,
+				7814E48E22019656005D4B79 /* Roboto-Italic.ttf */,
+				7814E48B22019655005D4B79 /* Roboto-Light.ttf */,
+				7814E49722019657005D4B79 /* Roboto-LightItalic.ttf */,
+				7814E49022019656005D4B79 /* Roboto-Medium.ttf */,
+				7814E49622019656005D4B79 /* Roboto-MediumItalic.ttf */,
+				7814E48D22019656005D4B79 /* Roboto-Regular.ttf */,
+				7814E48C22019656005D4B79 /* Roboto-Thin.ttf */,
+				7814E49222019656005D4B79 /* Roboto-ThinItalic.ttf */,
+				7814E48F22019656005D4B79 /* RobotoCondensed-Bold.ttf */,
+				7814E49322019656005D4B79 /* RobotoCondensed-BoldItalic.ttf */,
+				7814E49522019656005D4B79 /* RobotoCondensed-Italic.ttf */,
+				7814E49422019656005D4B79 /* RobotoCondensed-Light.ttf */,
+				7814E49122019656005D4B79 /* RobotoCondensed-LightItalic.ttf */,
+				7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7814E4D522019B5E005D4B79 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				7814E4D622019B6C005D4B79 /* TextField.swift */,
+				7814E4D822019E22005D4B79 /* Player.swift */,
+				7814E4DA2201A6A9005D4B79 /* MatchPair.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		AEA23581AF32964F4F9821D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				938CCE79758D58B540765A6B /* Pods-Chess Club Tournament.debug.xcconfig */,
+				9721F0D473C2C8DA683FEB7C /* Pods-Chess Club Tournament.release.xcconfig */,
+				8703D63DBF977D9DCC98818B /* Pods-Chess Club TournamentTests.debug.xcconfig */,
+				7795C93179BB8A5317BF5EC7 /* Pods-Chess Club TournamentTests.release.xcconfig */,
+				E76466FEE8B96293D18A397A /* Pods-Chess Club TournamentUITests.debug.xcconfig */,
+				6324DCB1B70089448291520A /* Pods-Chess Club TournamentUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7814E44F22019116005D4B79 /* Chess Club Tournament */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814E47822019116005D4B79 /* Build configuration list for PBXNativeTarget "Chess Club Tournament" */;
+			buildPhases = (
+				82277E52133AB82D75D6FF52 /* [CP] Check Pods Manifest.lock */,
+				7814E44C22019116005D4B79 /* Sources */,
+				7814E44D22019116005D4B79 /* Frameworks */,
+				7814E44E22019116005D4B79 /* Resources */,
+				FCBB29D7A61AE1714A41F03B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chess Club Tournament";
+			productName = "Chess Club Tournament";
+			productReference = 7814E45022019116005D4B79 /* Chess Club Tournament.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7814E46322019116005D4B79 /* Chess Club TournamentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814E47B22019116005D4B79 /* Build configuration list for PBXNativeTarget "Chess Club TournamentTests" */;
+			buildPhases = (
+				B27FFB231C83D31CB256E08D /* [CP] Check Pods Manifest.lock */,
+				7814E46022019116005D4B79 /* Sources */,
+				7814E46122019116005D4B79 /* Frameworks */,
+				7814E46222019116005D4B79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7814E46622019116005D4B79 /* PBXTargetDependency */,
+			);
+			name = "Chess Club TournamentTests";
+			productName = "Chess Club TournamentTests";
+			productReference = 7814E46422019116005D4B79 /* Chess Club TournamentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7814E46E22019116005D4B79 /* Chess Club TournamentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7814E47E22019116005D4B79 /* Build configuration list for PBXNativeTarget "Chess Club TournamentUITests" */;
+			buildPhases = (
+				F47BFE432CEA515422F1DD48 /* [CP] Check Pods Manifest.lock */,
+				7814E46B22019116005D4B79 /* Sources */,
+				7814E46C22019116005D4B79 /* Frameworks */,
+				7814E46D22019116005D4B79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7814E47122019116005D4B79 /* PBXTargetDependency */,
+			);
+			name = "Chess Club TournamentUITests";
+			productName = "Chess Club TournamentUITests";
+			productReference = 7814E46F22019116005D4B79 /* Chess Club TournamentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7814E44822019116005D4B79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ben Lee";
+				TargetAttributes = {
+					7814E44F22019116005D4B79 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7814E46322019116005D4B79 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7814E44F22019116005D4B79;
+					};
+					7814E46E22019116005D4B79 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7814E44F22019116005D4B79;
+					};
+				};
+			};
+			buildConfigurationList = 7814E44B22019116005D4B79 /* Build configuration list for PBXProject "Chess Club Tournament" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7814E44722019116005D4B79;
+			productRefGroup = 7814E45122019116005D4B79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7814E44F22019116005D4B79 /* Chess Club Tournament */,
+				7814E46322019116005D4B79 /* Chess Club TournamentTests */,
+				7814E46E22019116005D4B79 /* Chess Club TournamentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7814E44E22019116005D4B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814E4C222019657005D4B79 /* Roboto-MediumItalic.ttf in Resources */,
+				7814E4B922019657005D4B79 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				7814E4BF22019657005D4B79 /* RobotoCondensed-Italic.ttf in Resources */,
+				7814E4A422019657005D4B79 /* Roboto-Thin.ttf in Resources */,
+				7814E4AA22019657005D4B79 /* Roboto-Italic.ttf in Resources */,
+				7814E45E22019116005D4B79 /* LaunchScreen.storyboard in Resources */,
+				7814E4BC22019657005D4B79 /* RobotoCondensed-Light.ttf in Resources */,
+				7814E4CB22019657005D4B79 /* Roboto-BlackItalic.ttf in Resources */,
+				7814E4A722019657005D4B79 /* Roboto-Regular.ttf in Resources */,
+				7814E4CE22019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */,
+				7814E45B22019116005D4B79 /* Assets.xcassets in Resources */,
+				7814E4A122019657005D4B79 /* Roboto-Light.ttf in Resources */,
+				7814E4B322019657005D4B79 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				7814E4AD22019657005D4B79 /* RobotoCondensed-Bold.ttf in Resources */,
+				7814E49B22019657005D4B79 /* Roboto-Bold.ttf in Resources */,
+				7814E4B022019657005D4B79 /* Roboto-Medium.ttf in Resources */,
+				7814E4C822019657005D4B79 /* Roboto-Black.ttf in Resources */,
+				7814E4C522019657005D4B79 /* Roboto-LightItalic.ttf in Resources */,
+				7814E49E22019657005D4B79 /* Roboto-BoldItalic.ttf in Resources */,
+				7814E45922019116005D4B79 /* Main.storyboard in Resources */,
+				7814E4B622019657005D4B79 /* Roboto-ThinItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814E46222019116005D4B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814E4B722019657005D4B79 /* Roboto-ThinItalic.ttf in Resources */,
+				7814E4B422019657005D4B79 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				7814E4CC22019657005D4B79 /* Roboto-BlackItalic.ttf in Resources */,
+				7814E4C622019657005D4B79 /* Roboto-LightItalic.ttf in Resources */,
+				7814E4B122019657005D4B79 /* Roboto-Medium.ttf in Resources */,
+				7814E4C022019657005D4B79 /* RobotoCondensed-Italic.ttf in Resources */,
+				7814E4CF22019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */,
+				7814E4C322019657005D4B79 /* Roboto-MediumItalic.ttf in Resources */,
+				7814E4A522019657005D4B79 /* Roboto-Thin.ttf in Resources */,
+				7814E4AB22019657005D4B79 /* Roboto-Italic.ttf in Resources */,
+				7814E49F22019657005D4B79 /* Roboto-BoldItalic.ttf in Resources */,
+				7814E4A822019657005D4B79 /* Roboto-Regular.ttf in Resources */,
+				7814E4BA22019657005D4B79 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				7814E4C922019657005D4B79 /* Roboto-Black.ttf in Resources */,
+				7814E4AE22019657005D4B79 /* RobotoCondensed-Bold.ttf in Resources */,
+				7814E49C22019657005D4B79 /* Roboto-Bold.ttf in Resources */,
+				7814E4BD22019657005D4B79 /* RobotoCondensed-Light.ttf in Resources */,
+				7814E4A222019657005D4B79 /* Roboto-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814E46D22019116005D4B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814E4B822019657005D4B79 /* Roboto-ThinItalic.ttf in Resources */,
+				7814E4B522019657005D4B79 /* RobotoCondensed-LightItalic.ttf in Resources */,
+				7814E4CD22019657005D4B79 /* Roboto-BlackItalic.ttf in Resources */,
+				7814E4C722019657005D4B79 /* Roboto-LightItalic.ttf in Resources */,
+				7814E4B222019657005D4B79 /* Roboto-Medium.ttf in Resources */,
+				7814E4C122019657005D4B79 /* RobotoCondensed-Italic.ttf in Resources */,
+				7814E4D022019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */,
+				7814E4C422019657005D4B79 /* Roboto-MediumItalic.ttf in Resources */,
+				7814E4A622019657005D4B79 /* Roboto-Thin.ttf in Resources */,
+				7814E4AC22019657005D4B79 /* Roboto-Italic.ttf in Resources */,
+				7814E4A022019657005D4B79 /* Roboto-BoldItalic.ttf in Resources */,
+				7814E4A922019657005D4B79 /* Roboto-Regular.ttf in Resources */,
+				7814E4BB22019657005D4B79 /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				7814E4CA22019657005D4B79 /* Roboto-Black.ttf in Resources */,
+				7814E4AF22019657005D4B79 /* RobotoCondensed-Bold.ttf in Resources */,
+				7814E49D22019657005D4B79 /* Roboto-Bold.ttf in Resources */,
+				7814E4BE22019657005D4B79 /* RobotoCondensed-Light.ttf in Resources */,
+				7814E4A322019657005D4B79 /* Roboto-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82277E52133AB82D75D6FF52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chess Club Tournament-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B27FFB231C83D31CB256E08D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chess Club TournamentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F47BFE432CEA515422F1DD48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chess Club TournamentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCBB29D7A61AE1714A41F03B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chess Club Tournament/Pods-Chess Club Tournament-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SimpleAnimation/SimpleAnimation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleAnimation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chess Club Tournament/Pods-Chess Club Tournament-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7814E44C22019116005D4B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814E48722019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift in Sources */,
+				7814E45622019116005D4B79 /* HomeViewController.swift in Sources */,
+				7814E4D722019B6C005D4B79 /* TextField.swift in Sources */,
+				7814E4D422019B31005D4B79 /* TournamentOptionsViewController.swift in Sources */,
+				7814E4DF2201A810005D4B79 /* NoPlayerCollectionViewCell.swift in Sources */,
+				7814E4D922019E22005D4B79 /* Player.swift in Sources */,
+				7814E4822201917C005D4B79 /* Extensions.swift in Sources */,
+				7814E4E72202CEC1005D4B79 /* MatchupCollectionViewCell.swift in Sources */,
+				7814E4E92202D50F005D4B79 /* MatchupResultsViewController.swift in Sources */,
+				7814E45422019116005D4B79 /* AppDelegate.swift in Sources */,
+				7814E4DB2201A6A9005D4B79 /* MatchPair.swift in Sources */,
+				7814E4D222019AB0005D4B79 /* AddPlayersViewController.swift in Sources */,
+				7814E4DD2201A7F1005D4B79 /* PlayerCollectionViewCell.swift in Sources */,
+				7814E4E52201B17C005D4B79 /* TournamentViewController.swift in Sources */,
+				7814E4E12201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814E46022019116005D4B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814E46922019116005D4B79 /* Chess_Club_TournamentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7814E46B22019116005D4B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7814E47422019116005D4B79 /* Chess_Club_TournamentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7814E46622019116005D4B79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7814E44F22019116005D4B79 /* Chess Club Tournament */;
+			targetProxy = 7814E46522019116005D4B79 /* PBXContainerItemProxy */;
+		};
+		7814E47122019116005D4B79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7814E44F22019116005D4B79 /* Chess Club Tournament */;
+			targetProxy = 7814E47022019116005D4B79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7814E45722019116005D4B79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7814E45822019116005D4B79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7814E45C22019116005D4B79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7814E45D22019116005D4B79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7814E47622019116005D4B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7814E47722019116005D4B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7814E47922019116005D4B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938CCE79758D58B540765A6B /* Pods-Chess Club Tournament.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Chess Club Tournament/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ben.Chess-Club-Tournament";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7814E47A22019116005D4B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9721F0D473C2C8DA683FEB7C /* Pods-Chess Club Tournament.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Chess Club Tournament/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ben.Chess-Club-Tournament";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7814E47C22019116005D4B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8703D63DBF977D9DCC98818B /* Pods-Chess Club TournamentTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Chess Club TournamentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ben.Chess-Club-TournamentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chess Club Tournament.app/Chess Club Tournament";
+			};
+			name = Debug;
+		};
+		7814E47D22019116005D4B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7795C93179BB8A5317BF5EC7 /* Pods-Chess Club TournamentTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Chess Club TournamentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ben.Chess-Club-TournamentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chess Club Tournament.app/Chess Club Tournament";
+			};
+			name = Release;
+		};
+		7814E47F22019116005D4B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E76466FEE8B96293D18A397A /* Pods-Chess Club TournamentUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Chess Club TournamentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ben.Chess-Club-TournamentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chess Club Tournament";
+			};
+			name = Debug;
+		};
+		7814E48022019116005D4B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6324DCB1B70089448291520A /* Pods-Chess Club TournamentUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Chess Club TournamentUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ben.Chess-Club-TournamentUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chess Club Tournament";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7814E44B22019116005D4B79 /* Build configuration list for PBXProject "Chess Club Tournament" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814E47622019116005D4B79 /* Debug */,
+				7814E47722019116005D4B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814E47822019116005D4B79 /* Build configuration list for PBXNativeTarget "Chess Club Tournament" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814E47922019116005D4B79 /* Debug */,
+				7814E47A22019116005D4B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814E47B22019116005D4B79 /* Build configuration list for PBXNativeTarget "Chess Club TournamentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814E47C22019116005D4B79 /* Debug */,
+				7814E47D22019116005D4B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7814E47E22019116005D4B79 /* Build configuration list for PBXNativeTarget "Chess Club TournamentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7814E47F22019116005D4B79 /* Debug */,
+				7814E48022019116005D4B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7814E44822019116005D4B79 /* Project object */;
+}
