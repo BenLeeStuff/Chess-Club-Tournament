@@ -35,6 +35,18 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
             roundLabel.text = "Round: \(currentRound)/\(String(describing: numberOfRounds!))"
         }
     }
+    lazy var fulllCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 0
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = UIColor.clear
+        cv.dataSource = self
+        cv.delegate = self
+        cv.isPagingEnabled = false
+        // cv.layer.shadowRadius = 40
+        return cv
+    }()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -68,6 +80,17 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         button.layer.cornerRadius = 5
         button.isEnabled = false
         button.alpha = 0.5
+        return button
+    }()
+    
+    var optionsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.addTarget(self, action: #selector(startNextRound), for: .touchUpInside)
+        button.setTitle("Options", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Roboto-Medium", size: 15)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = UIColor.BLACKCOLOR()
+        button.layer.cornerRadius = 5
         return button
     }()
 

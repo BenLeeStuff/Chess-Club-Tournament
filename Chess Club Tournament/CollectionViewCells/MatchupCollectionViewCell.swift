@@ -124,10 +124,10 @@ class MatchupCollectionViewCell: UICollectionViewCell {
         return lbl
     }()
     
-    let overlay: UIView = {
-        let v = UIView()
-        
-    }
+//    let overlay: UIView = {
+//        let v = UIView()
+//
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

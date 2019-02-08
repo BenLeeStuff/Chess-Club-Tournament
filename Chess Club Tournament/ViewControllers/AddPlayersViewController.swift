@@ -182,6 +182,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if (textField.text != "") || (textField.text != "Add Player Name") {
             currentTextFieldName = textField.text!
