@@ -23,7 +23,6 @@ class MatchupResultsViewController: UIViewController {
 
     var matchPair: MatchPair? {
         didSet {
-            print("JKDKSBDJSBH")
             //setupButtonTitle()
         }
     }

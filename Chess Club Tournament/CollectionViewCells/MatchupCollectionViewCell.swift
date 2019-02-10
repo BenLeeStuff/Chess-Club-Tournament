@@ -16,7 +16,7 @@ class MatchupCollectionViewCell: UICollectionViewCell {
         let wins = player.totalWins
         let losses = player.totalLosses
         let statsString = "\n(" + String(describing: wins) + "W - " + String(describing: losses) + "L)"
-        let attributedText = NSMutableAttributedString(string: name! + "  ", attributes: [NSAttributedStringKey.font : UIFont(name: "Roboto-Regular", size: 20)])
+        let attributedText = NSMutableAttributedString(string: name! + "  ", attributes: [NSAttributedStringKey.font : UIFont(name: "Roboto-Regular", size: 17)])
         
         attributedText.append(NSAttributedString(string: statsString , attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15), NSAttributedStringKey.foregroundColor: UIColor.gray]))
         return attributedText
@@ -44,7 +44,7 @@ class MatchupCollectionViewCell: UICollectionViewCell {
         let player1Wins = whitePlayer!.totalWins!
         let player1Losses = whitePlayer!.totalLosses!
         let player1StatsString = "\n(" + String(describing: player1Wins) + "W - " + String(describing: player1Losses) + "L)"
-        let player1AttributedText = NSMutableAttributedString(string: player1Name + "  ", attributes: [NSAttributedStringKey.font : UIFont(name: "Roboto-Regular", size: 20)])
+        let player1AttributedText = NSMutableAttributedString(string: player1Name + "  ", attributes: [NSAttributedStringKey.font : UIFont(name: "Roboto-Regular", size: 17)])
         
         player1AttributedText.append(NSAttributedString(string: player1StatsString , attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15), NSAttributedStringKey.foregroundColor: UIColor.gray]))
         
@@ -136,14 +136,20 @@ class MatchupCollectionViewCell: UICollectionViewCell {
     }
     
     func setupUI() {
+        layer.cornerRadius = 5
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        layer.shadowOpacity = 1
+        layer.shadowOffset = CGSize.zero
+        layer.shadowRadius = 2
         backgroundColor = .white
         
+        
         addSubview(whiteImageView)
-        whiteImageView.anchor(top: nil, left: leftAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
+        whiteImageView.anchor(top: nil, left: leftAnchor, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 5, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
         whiteImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         addSubview(blackImageView)
-        blackImageView.anchor(top: nil, left: nil, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 50)
+        blackImageView.anchor(top: nil, left: nil, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 5, width: 50, height: 50)
         blackImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         addSubview(whiteColorLabel)

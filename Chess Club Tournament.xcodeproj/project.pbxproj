@@ -73,16 +73,21 @@
 		7814E4CF22019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */; };
 		7814E4D022019657005D4B79 /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */; };
 		7814E4D222019AB0005D4B79 /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D122019AB0005D4B79 /* AddPlayersViewController.swift */; };
-		7814E4D422019B31005D4B79 /* TournamentOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D322019B31005D4B79 /* TournamentOptionsViewController.swift */; };
+		7814E4D422019B31005D4B79 /* CreateTournamentOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D322019B31005D4B79 /* CreateTournamentOptionsViewController.swift */; };
 		7814E4D722019B6C005D4B79 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D622019B6C005D4B79 /* TextField.swift */; };
 		7814E4D922019E22005D4B79 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4D822019E22005D4B79 /* Player.swift */; };
 		7814E4DB2201A6A9005D4B79 /* MatchPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4DA2201A6A9005D4B79 /* MatchPair.swift */; };
 		7814E4DD2201A7F1005D4B79 /* PlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4DC2201A7F1005D4B79 /* PlayerCollectionViewCell.swift */; };
 		7814E4DF2201A810005D4B79 /* NoPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4DE2201A810005D4B79 /* NoPlayerCollectionViewCell.swift */; };
 		7814E4E12201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E02201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift */; };
-		7814E4E52201B17C005D4B79 /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E42201B17C005D4B79 /* TournamentViewController.swift */; };
 		7814E4E72202CEC1005D4B79 /* MatchupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */; };
 		7814E4E92202D50F005D4B79 /* MatchupResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */; };
+		783A9B24220D6AE3003B3794 /* TournamentPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A9B23220D6AE3003B3794 /* TournamentPlayersViewController.swift */; };
+		783A9B26220D6C6C003B3794 /* TournamentSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A9B25220D6C6C003B3794 /* TournamentSettingsViewController.swift */; };
+		783A9B28220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A9B27220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift */; };
+		783A9B2A220DF47F003B3794 /* AddPlayerCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A9B29220DF47F003B3794 /* AddPlayerCardViewController.swift */; };
+		787C45A9220E5D54004CE0FA /* SitOutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C45A8220E5D54004CE0FA /* SitOutCollectionViewCell.swift */; };
+		78AC1FE2221018B0008E5B12 /* TournamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E42201B17C005D4B79 /* TournamentViewController.swift */; };
 		972665A525A0C242957C5B65 /* Pods_Chess_Club_TournamentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A7D28B71FDAEC17BD9CD38 /* Pods_Chess_Club_TournamentUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,7 +145,7 @@
 		7814E49922019657005D4B79 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		7814E49A22019657005D4B79 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		7814E4D122019AB0005D4B79 /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
-		7814E4D322019B31005D4B79 /* TournamentOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentOptionsViewController.swift; sourceTree = "<group>"; };
+		7814E4D322019B31005D4B79 /* CreateTournamentOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTournamentOptionsViewController.swift; sourceTree = "<group>"; };
 		7814E4D622019B6C005D4B79 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		7814E4D822019E22005D4B79 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		7814E4DA2201A6A9005D4B79 /* MatchPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPair.swift; sourceTree = "<group>"; };
@@ -150,6 +155,11 @@
 		7814E4E42201B17C005D4B79 /* TournamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
 		7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchupCollectionViewCell.swift; sourceTree = "<group>"; };
 		7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchupResultsViewController.swift; sourceTree = "<group>"; };
+		783A9B23220D6AE3003B3794 /* TournamentPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentPlayersViewController.swift; sourceTree = "<group>"; };
+		783A9B25220D6C6C003B3794 /* TournamentSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentSettingsViewController.swift; sourceTree = "<group>"; };
+		783A9B27220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerToTournamentCollectionViewCell.swift; sourceTree = "<group>"; };
+		783A9B29220DF47F003B3794 /* AddPlayerCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerCardViewController.swift; sourceTree = "<group>"; };
+		787C45A8220E5D54004CE0FA /* SitOutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitOutCollectionViewCell.swift; sourceTree = "<group>"; };
 		8677BDFDFB4D5A42E9912687 /* Pods_Chess_Club_Tournament.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Club_Tournament.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8703D63DBF977D9DCC98818B /* Pods-Chess Club TournamentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess Club TournamentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chess Club TournamentTests/Pods-Chess Club TournamentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BBFFB2E8104ECE548ADA2C8 /* Pods_Chess_Club_TournamentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Club_TournamentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,11 +267,8 @@
 		7814E483220191ED005D4B79 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7814E45522019116005D4B79 /* HomeViewController.swift */,
-				7814E4D322019B31005D4B79 /* TournamentOptionsViewController.swift */,
-				7814E4D122019AB0005D4B79 /* AddPlayersViewController.swift */,
-				7814E4E42201B17C005D4B79 /* TournamentViewController.swift */,
-				7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */,
+				78AC1FE0221017FC008E5B12 /* Home */,
+				78AC1FE122101809008E5B12 /* Tournament */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -274,6 +281,8 @@
 				7814E4DE2201A810005D4B79 /* NoPlayerCollectionViewCell.swift */,
 				7814E4E02201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift */,
 				7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */,
+				783A9B27220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift */,
+				787C45A8220E5D54004CE0FA /* SitOutCollectionViewCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -311,6 +320,28 @@
 				7814E4DA2201A6A9005D4B79 /* MatchPair.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		78AC1FE0221017FC008E5B12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7814E45522019116005D4B79 /* HomeViewController.swift */,
+				7814E4D322019B31005D4B79 /* CreateTournamentOptionsViewController.swift */,
+				7814E4D122019AB0005D4B79 /* AddPlayersViewController.swift */,
+				7814E4E42201B17C005D4B79 /* TournamentViewController.swift */,
+				783A9B25220D6C6C003B3794 /* TournamentSettingsViewController.swift */,
+				783A9B29220DF47F003B3794 /* AddPlayerCardViewController.swift */,
+				7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */,
+				783A9B23220D6AE3003B3794 /* TournamentPlayersViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		78AC1FE122101809008E5B12 /* Tournament */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tournament;
 			sourceTree = "<group>";
 		};
 		AEA23581AF32964F4F9821D6 /* Pods */ = {
@@ -519,15 +550,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Chess Club Tournament-checkManifestLockResult.txt",
 			);
@@ -541,15 +568,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Chess Club TournamentTests-checkManifestLockResult.txt",
 			);
@@ -563,15 +586,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Chess Club TournamentUITests-checkManifestLockResult.txt",
 			);
@@ -585,15 +604,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chess Club Tournament/Pods-Chess Club Tournament-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SimpleAnimation/SimpleAnimation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleAnimation.framework",
 			);
@@ -609,20 +624,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787C45A9220E5D54004CE0FA /* SitOutCollectionViewCell.swift in Sources */,
 				7814E48722019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift in Sources */,
 				7814E45622019116005D4B79 /* HomeViewController.swift in Sources */,
 				7814E4D722019B6C005D4B79 /* TextField.swift in Sources */,
-				7814E4D422019B31005D4B79 /* TournamentOptionsViewController.swift in Sources */,
+				783A9B26220D6C6C003B3794 /* TournamentSettingsViewController.swift in Sources */,
+				78AC1FE2221018B0008E5B12 /* TournamentViewController.swift in Sources */,
+				783A9B2A220DF47F003B3794 /* AddPlayerCardViewController.swift in Sources */,
+				7814E4D422019B31005D4B79 /* CreateTournamentOptionsViewController.swift in Sources */,
 				7814E4DF2201A810005D4B79 /* NoPlayerCollectionViewCell.swift in Sources */,
 				7814E4D922019E22005D4B79 /* Player.swift in Sources */,
 				7814E4822201917C005D4B79 /* Extensions.swift in Sources */,
 				7814E4E72202CEC1005D4B79 /* MatchupCollectionViewCell.swift in Sources */,
 				7814E4E92202D50F005D4B79 /* MatchupResultsViewController.swift in Sources */,
 				7814E45422019116005D4B79 /* AppDelegate.swift in Sources */,
+				783A9B28220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift in Sources */,
 				7814E4DB2201A6A9005D4B79 /* MatchPair.swift in Sources */,
 				7814E4D222019AB0005D4B79 /* AddPlayersViewController.swift in Sources */,
+				783A9B24220D6AE3003B3794 /* TournamentPlayersViewController.swift in Sources */,
 				7814E4DD2201A7F1005D4B79 /* PlayerCollectionViewCell.swift in Sources */,
-				7814E4E52201B17C005D4B79 /* TournamentViewController.swift in Sources */,
 				7814E4E12201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

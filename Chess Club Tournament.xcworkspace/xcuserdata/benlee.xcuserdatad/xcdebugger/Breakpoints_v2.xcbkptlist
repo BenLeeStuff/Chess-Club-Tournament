@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   type = "1"
+   type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chess Club Tournament/ViewControllers/TournamentViewController.swift"
-            timestampString = "571480011.919867"
+            timestampString = "571480011.919522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "357"
-            endingLineNumber = "357"
-            landmarkName = "setPlayersWithSameWins()"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
+            landmarkName = "addPlayerToTournament(player:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chess Club Tournament/ViewControllers/TournamentViewController.swift"
-            timestampString = "571480011.919925"
+            timestampString = "571480011.9196121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "setPlayersWithSameWins()"
+            startingLineNumber = "422"
+            endingLineNumber = "422"
+            landmarkName = "addPlayerToTournament(player:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chess Club Tournament/ViewControllers/TournamentViewController.swift"
-            timestampString = "571480011.919983"
+            timestampString = "571480011.919681"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "updatePlayerResults(matchPair:index:)"
+            startingLineNumber = "424"
+            endingLineNumber = "424"
+            landmarkName = "addPlayerToTournament(player:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chess Club Tournament/ViewControllers/TournamentViewController.swift"
-            timestampString = "571480011.9200439"
+            timestampString = "571480011.9197429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "274"
-            endingLineNumber = "274"
-            landmarkName = "updatePlayerResults(matchPair:index:)"
+            startingLineNumber = "425"
+            endingLineNumber = "425"
+            landmarkName = "addPlayerToTournament(player:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,13 +74,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chess Club Tournament/ViewControllers/TournamentViewController.swift"
-            timestampString = "571480011.920104"
+            timestampString = "571480011.919806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
-            landmarkName = "TournamentViewController"
-            landmarkType = "3">
+            startingLineNumber = "427"
+            endingLineNumber = "427"
+            landmarkName = "addPlayerToTournament(player:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chess Club Tournament/ViewControllers/Home/TournamentViewController.swift"
+            timestampString = "571482937.317264"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "455"
+            endingLineNumber = "455"
+            landmarkName = "addPlayerToTournament(player:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

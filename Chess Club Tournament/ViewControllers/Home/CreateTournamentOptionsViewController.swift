@@ -1,5 +1,5 @@
 //
-//  TournamentOptionsViewController.swift
+//  CreateTournamentOptionsViewController.swift
 //  Chess Club Tournament
 //
 //  Created by Ben Lee on 1/30/19.

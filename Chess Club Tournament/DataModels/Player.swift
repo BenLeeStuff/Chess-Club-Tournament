@@ -21,8 +21,9 @@ class Player {
     var previousColor: String?
     var lastPlayed: String?
     var opponentsPlayed: [String]?
+    var isSittingOut: Bool?
     
-    init(name: String?, boardColor: String?, didWin: Bool?, didLose: Bool?, didDraw: Bool?, place: Int?, totalWins: Int?, totalLosses: Int?, totalDraws: Int?, totalScore: Double?, scores: [Double]?, previousColor: String?, lastPlayed: String?, opponentsPlayed: [String]?) {
+    init(name: String?, boardColor: String?, didWin: Bool?, didLose: Bool?, didDraw: Bool?, place: Int?, totalWins: Int?, totalLosses: Int?, totalDraws: Int?, totalScore: Double?, scores: [Double]?, previousColor: String?, lastPlayed: String?, opponentsPlayed: [String]?, isSittingOut: Bool?) {
         self.name = name as? String ?? ""
         self.boardColor = boardColor as? String ?? "none"
         self.didWin = didWin as? Bool ?? false
@@ -35,5 +36,6 @@ class Player {
         self.lastPlayed = lastPlayed as? String ?? "none"
         self.opponentsPlayed = opponentsPlayed as? [String] ?? []
         self.totalDraws = totalDraws as? Int ?? 0
+        self.isSittingOut = self.isSittingOut ?? false
     }
 }

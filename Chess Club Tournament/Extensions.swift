@@ -73,5 +73,13 @@ extension UIColor {
         return UIColor.rgb(red: 202, green: 206, blue: 216)
     }
     
+    static func CHESSRED() -> UIColor{
+        return UIColor.rgb(red: 255, green: 95, blue: 104)
+    }
+    
+    static func CHESSBLUE() -> UIColor{
+        return UIColor.rgb(red: 0, green: 191, blue: 226)
+    }
+    
 }
 
