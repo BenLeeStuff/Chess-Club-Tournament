@@ -10,20 +10,21 @@ import UIKit
 
 protocol MatchupResultsDelegate: class {
     func updatePlayerResults(matchPair: MatchPair, index: Int)
-    
 }
 
 class MatchupResultsViewController: UIViewController {
     
+    var matchupCollectionViewCell = MatchupCollectionViewCell()
     weak var delegate: MatchupResultsDelegate?
     
+    var currentIndexPath: IndexPath?
     var currentIndex: Int?
     var whitePlayer: Player?
     var blackPlayer: Player?
 
     var matchPair: MatchPair? {
         didSet {
-            //setupButtonTitle()
+            
         }
     }
     
@@ -109,10 +110,8 @@ class MatchupResultsViewController: UIViewController {
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
         button.addTarget(self, action: #selector(handleDraw), for: .touchUpInside)
-
         return button
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -168,10 +167,13 @@ class MatchupResultsViewController: UIViewController {
         matchPair?.player1?.totalWins? += 1
         matchPair?.player1?.totalScore? += 1
         matchPair?.player2?.totalLosses? += 1
-
-        delegate?.updatePlayerResults(matchPair: matchPair!, index: index)
-        navigationController?.popViewController(animated: true)
+        matchPair?.winner = matchPair?.player1
+        matchPair?.loser = matchPair?.player2
         
+        delegate?.updatePlayerResults(matchPair: matchPair!, index: index)
+        //delegate?.animateCellOverlay(indexPath: currentIndexPath!)
+        
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func handleBlackWin() {
@@ -180,8 +182,13 @@ class MatchupResultsViewController: UIViewController {
         matchPair?.player2?.totalWins? += 1
         matchPair?.player2?.totalScore? += 1
         matchPair?.player1?.totalLosses? += 1
-
+        
+        matchPair?.winner = matchPair?.player2
+        matchPair?.loser = matchPair?.player1
+        
         delegate?.updatePlayerResults(matchPair: matchPair!, index: index)
+        //delegate?.animateCellOverlay(indexPath: currentIndexPath!)
+        
         navigationController?.popViewController(animated: true)
 
     }
@@ -192,8 +199,11 @@ class MatchupResultsViewController: UIViewController {
         matchPair?.player1?.totalDraws? += 1
         matchPair?.player2?.totalDraws? += 1
         matchPair?.player1?.totalScore? += 0.5
-        matchPair?.player2?.totalScore? += 0.5        
+        matchPair?.player2?.totalScore? += 0.5
+        matchPair?.draw = true
         delegate?.updatePlayerResults(matchPair: matchPair!, index: index)
+        //delegate?.animateCellOverlay(indexPath: currentIndexPath!)
+
         navigationController?.popViewController(animated: true)
 
     }

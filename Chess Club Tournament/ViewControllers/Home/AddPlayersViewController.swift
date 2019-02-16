@@ -11,6 +11,9 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
     
     var cells: [UICollectionViewCell] = []
     
+    var playerSittingOutIndex: Int?
+    
+    
     var numberOfPlayers : Int? {
         didSet {
             print("NUMBER OD PLAYERS DID SET \(numberOfPlayers!)")
@@ -23,8 +26,16 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     var names: [String] = []
+    var players: [Player] = []
+
     var namesAfterAddPlayer: [String] = []
-    var didAddPlayer: Bool = false
+    
+    var collectionViewTopBar: UIView = {
+        let v = UIView()
+        v.backgroundColor = UIColor.rgb(red: 0, green: 0, blue: 0)
+        v.alpha = 0.1
+        return v
+    }()
     
     let titleLabel: UILabel = {
         let lbl = UILabel()
@@ -38,7 +49,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
     let descriptionLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "Add players to enter in the tournament."
-        lbl.font = UIFont(name: "Roboto-Regular", size: 14)
+        lbl.font = UIFont(name: "Roboto-Regular", size: 16)
         lbl.textAlignment = .center
         lbl.textColor = UIColor.TEXTCOLOR()
         return lbl
@@ -53,7 +64,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         cv.dataSource = self
         cv.delegate = self
         cv.isPagingEnabled = false
-        // cv.layer.shadowRadius = 40
+        cv.alwaysBounceVertical = true
         return cv
     }()
     
@@ -124,6 +135,8 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         view.addSubview(descriptionLabel)
         descriptionLabel.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 40, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 20)
         
+     
+        
         let buttonStackView = UIStackView(arrangedSubviews: [addPlayerButton, startTournamentButton])
         addPlayerButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         startTournamentButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -134,8 +147,11 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         view.addSubview(buttonStackView)
         buttonStackView.anchor(top: descriptionLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 25, paddingLeft: 20, paddingBottom: 0, paddingRight: 20, width: 0, height: 0)
         
+        view.addSubview(collectionViewTopBar)
+        collectionViewTopBar.anchor(top: startTournamentButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 25, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 1)
+        
         view.addSubview(collectionView)
-        collectionView.anchor(top: addPlayerButton.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        collectionView.anchor(top: collectionViewTopBar.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         registerCells()
     }
@@ -146,16 +162,37 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let addPlayerCell = collectionView.dequeueReusableCell(withReuseIdentifier: addPlayerCellId, for: indexPath) as! AddPlayerCollectionViewCell
-        
-//        if didAddPlayer {
-//           // addPlayerCell.nameLabel.text = namesAfterAddPlayer[indexPath.item]
-//        }
-        addPlayerCell.number = String(indexPath.item + 1)
-        addPlayerCell.nameTextField.delegate = self
-        
-        //addPlayerCell.nameLabel.text = names[indexPath.item]
-        return addPlayerCell
+        if players.count > 0 {
+            let addPlayerCell = collectionView.dequeueReusableCell(withReuseIdentifier: addPlayerCellId, for: indexPath) as! AddPlayerCollectionViewCell
+   
+            addPlayerCell.number = String(indexPath.item + 1)
+            addPlayerCell.nameTextField.delegate = self
+            
+            let player = players[indexPath.item]
+            
+            if players[indexPath.item].isSittingOut == true {
+                let playerName = players[indexPath.item].name!
+
+                print("got here")
+                let nameAttributes = [NSAttributedStringKey.font:  UIFont(name: "Roboto-Regular", size: 16), NSAttributedStringKey.foregroundColor: UIColor.TEXTCOLOR()]
+                let sitOutAttributes = [NSAttributedStringKey.font:  UIFont(name: "Roboto-Regular", size: 14), NSAttributedStringKey.foregroundColor: UIColor.CHESSRED()]
+                let nameAttributedString = NSMutableAttributedString(string: "\(players[indexPath.item].name!)", attributes: nameAttributes)
+                let sitOutAttributedString = NSMutableAttributedString(string: " (Sitting Out)", attributes: sitOutAttributes)
+                nameAttributedString.append(sitOutAttributedString)
+                playerNames[indexPath.item] = "\(playerNames[indexPath.item]) (Sitting Out)"
+
+                addPlayerCell.nameTextField.attributedText = nameAttributedString
+            } else {
+                addPlayerCell.name = players[indexPath.item].name!
+
+            }
+            return addPlayerCell
+        } else {
+            let addPlayerCell = collectionView.dequeueReusableCell(withReuseIdentifier: addPlayerCellId, for: indexPath) as! AddPlayerCollectionViewCell
+            addPlayerCell.number = String(indexPath.item + 1)
+            addPlayerCell.nameTextField.delegate = self
+            return addPlayerCell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -180,7 +217,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 1
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -189,7 +226,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         }
     }
     
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         print("ended")
         if textField.text != "" || textField.text != "Add Player Name" {
             let playerName = textField.text ?? ""
@@ -198,7 +235,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
             } else {
                 if let index = playerNames.index(of: currentTextFieldName) {
                     playerNames[index] = playerName
-                    print("hot here")
+                    print("got here")
                 } else {
                     playerNames.append(playerName)
                 }
@@ -207,19 +244,91 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         }
         print(playerNames)
         print("playerNames: \(playerNames)")
-        print("player Count: \(playerNames.count)")
-        
-        return true
+        print("Names Count: \(playerNames.count)")
+        print("Player Count: \(players.count)")
+
+        setPlayerNames(blankOk: true)
     }
 
-    func setPlayerNames() {
+    func setPlayerNames(blankOk: Bool) {
+        names.removeAll()
         
-        for index in 0...numberOfPlayers! - 1 {
-            
+        if blankOk == true {
+            for index in 0...playerNames.count - 1 {
+                names.append(playerNames[index])
+            }
+        } else {
+            if playerNames.count > 0 {
+                for index in 0...playerNames.count - 1 {
+                    if playerNames[index] != "" {
+                        names.append(playerNames[index])
+                    }
+                }
+            }
         }
-        
-        for name in playerNames {
-            names.append(name)
+        playerNames = names
+    }
+    
+    func setPlayers() {
+        if players.count == 0 {
+            for name in playerNames {
+                
+                let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                players.append(player)
+            }
+        } else {
+            var unsetPlayerNamesHolder: [String] = []
+            var playerNamesHolder: [String] = []
+            
+            for player in players {
+                playerNamesHolder.append(player.name!)
+            }
+            for name in playerNames {
+                unsetPlayerNamesHolder.append(name)
+            }
+            
+            for name in playerNamesHolder {
+                unsetPlayerNamesHolder = unsetPlayerNamesHolder.filter { $0 != name }
+            }
+            
+            for name in unsetPlayerNamesHolder {
+                let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                players.append(player)
+            }
+        }
+    }
+    
+    func setPlayers(blankOk: Bool) {
+
+        players.removeAll()
+        if blankOk == true {
+            for name in playerNames {
+
+                if name.range(of:"Sitting Out") != nil {
+                    let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: true)
+                    players.append(player)
+
+                } else {
+                    let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                    players.append(player)
+
+                }
+            }
+        } else {
+            for name in playerNames {
+                if name != "" {
+                    if name.contains("(Sitting Out)") {
+                        print("YES")
+                        let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: true)
+                        players.append(player)
+                        
+                    } else {
+                        let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                        players.append(player)
+                        
+                    }
+                }
+            }
         }
     }
     
@@ -227,23 +336,9 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         let tournamentVC = TournamentViewController()
         tournamentVC.names = names
         tournamentVC.numberOfRounds = numberOfRounds
+        tournamentVC.players = players
         print("didsetttt \(numberOfRounds)")
         navigationController?.pushViewController(tournamentVC, animated: true)
-    }
-    
-    func addPlayerToTournament(player: Player) {
-        playersList.append(player)
-        collectionView.reloadData()
-    }
-    
-    func shiftValues() {
-        namesAfterAddPlayer.removeAll()
-        namesAfterAddPlayer.append("")
-        for name in names {
-            namesAfterAddPlayer.append(name)
-        }
-        names = namesAfterAddPlayer
-        print("NEW \(namesAfterAddPlayer)")
     }
     
     func checkValidNames() {
@@ -254,17 +349,96 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         }
     }
     
-    
-    
     @objc func addPlayerButtonPressed() {
-        numberOfPlayers! += 1
-        didAddPlayer = true
-        shiftValues()
-        collectionView.reloadData()
+        view.endEditing(true)
+        setPlayers(blankOk: true)
+        if players.count > 0 {
+            numberOfPlayers! += 1
+            let player = Player(name: "", boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore: 0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+            players.append(player)
+            playerNames.append(player.name!)
+            showAddPlayerButtonAlert()
+            let index = numberOfPlayers! - 1
+            print("INDEx: \(index)")
+            let indexPath = IndexPath(item: index, section: 0)
+            collectionView.insertItems(at: [indexPath])
+            collectionView.reloadItems(at: [indexPath])
+            collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.bottom, animated: true)
+
+        } else {
+            numberOfPlayers! += 1
+            let index = numberOfPlayers! - 1
+            print("INDEx: \(index)")
+            let indexPath = IndexPath(item: index, section: 0)
+            collectionView.insertItems(at: [indexPath])
+            collectionView.reloadItems(at: [indexPath])
+            collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.bottom, animated: true)
+        }
     }
     
     @objc func startTournament() {
-        setPlayerNames()
-        toTournamentViewController()
+        view.endEditing(true)
+        setPlayerNames(blankOk: false)
+        setPlayers(blankOk: false)
+        if players.count % 2 != 0 { // Odd number of players
+            
+            var playersSittingOut = 0
+            for index in 0...players.count - 1 {
+                if players[index].isSittingOut == true {
+                    playersSittingOut += 1
+                }
+            }
+            
+            if (players.count - playersSittingOut) % 2 != 0 {
+                showOddAlert()
+            } else {
+                //setPlayers(blankOk: false)
+                toTournamentViewController()
+            }
+            
+        } else if players.count == 0 {
+            // need to implement alert for no players
+            //toTournamentViewController()
+        } else if players.count == 1 {
+            toTournamentViewController()
+        } else {
+            setPlayers(blankOk: false)
+            toTournamentViewController()
+        }
+    }
+    
+    func showOddAlert() {
+        let alert = UIAlertController(title: "Odd Players!", message: "There are an odd number of players. Please select a player to sit out, or add another player.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Select Player", style: .default) { (action) in
+            // need to implement selecting of player sitting out
+            
+            self.setPlayers(blankOk: true)
+            let selectPlayerToSitOutViewController = SelectSitOutPlayerViewController()
+            selectPlayerToSitOutViewController.names = self.names
+            selectPlayerToSitOutViewController.addPlayersViewController = self
+            selectPlayerToSitOutViewController.players = self.players
+            
+           
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            self.navigationItem.backBarButtonItem = backItem
+            self.navigationController?.pushViewController(selectPlayerToSitOutViewController, animated: true)
+            
+        }
+        let cancel = UIAlertAction(title: "Add Player", style: .default, handler: nil)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showAddPlayerButtonAlert() {
+
+    }
+    
+    func printPlayerNames() {
+        for player in players {
+            print("NAMES: \(player.name)")
+        }
     }
 }

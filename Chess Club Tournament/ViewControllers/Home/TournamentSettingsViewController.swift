@@ -12,10 +12,9 @@ class TournamentSettingViewController: UIViewController, UICollectionViewDelegat
     var tournamentViewController = TournamentViewController()
     
     let addPlayersCellId = "addPlayersCellId"
-    let removePlayersCellId = "removePlayersCellId" // need to implement
+    let deletePlayersCellId = "deletePlayersCellId" // need to implement
     let endTournamentCellId = "endTournamentCellId" // need to implement
     let addRoundsCellId = "addRoundsCellId" // need to implement
-    
     let cellId = "CellId"
 
     var players: [Player] = []
@@ -52,14 +51,15 @@ class TournamentSettingViewController: UIViewController, UICollectionViewDelegat
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setupUI()
     }
     
     func setupUI() {
+        let margins = view.layoutMarginsGuide
+
         view.addSubview(collectionView)
         overlay.isHidden = true
 
-        collectionView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 1, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        collectionView.anchor(top: margins.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 1, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
         view.addSubview(overlay)
         overlay.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
@@ -69,12 +69,17 @@ class TournamentSettingViewController: UIViewController, UICollectionViewDelegat
     
     func registerCells() {
         collectionView.register(AddPlayerToTournamentCollectionViewCell.self, forCellWithReuseIdentifier: addPlayersCellId)
+        
+        collectionView.register(DeletePlayerCollectionViewCell.self, forCellWithReuseIdentifier: deletePlayersCellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.item {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: addPlayersCellId, for: indexPath) as! AddPlayerToTournamentCollectionViewCell
+            return cell
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: deletePlayersCellId, for: indexPath) as! DeletePlayerCollectionViewCell
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UICollectionViewCell
@@ -92,14 +97,19 @@ class TournamentSettingViewController: UIViewController, UICollectionViewDelegat
             addPlayersCardViewController.delegate = self
             showOverlay()
             navigationController?.present(addPlayersCardViewController, animated: true, completion: nil)
+        case 1:
+            players = tournamentViewController.players
+            let deletePlayerViewController = DeletePlayerViewController()
+            deletePlayerViewController.players = players
+            
+            navigationController?.pushViewController(deletePlayerViewController, animated: true)
         default:
             break
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

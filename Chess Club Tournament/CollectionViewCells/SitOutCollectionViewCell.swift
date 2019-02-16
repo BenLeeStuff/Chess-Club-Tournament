@@ -10,6 +10,12 @@ import UIKit
 
 class SitOutCollectionViewCell: UICollectionViewCell {
     
+    var player: Player? {
+        didSet {
+            setAttributedText(player: player!)
+        }
+    }
+    
     func setAttributedText(player: Player) -> NSMutableAttributedString {
         let name = player.name!
         let wins = player.totalWins!
@@ -70,7 +76,7 @@ class SitOutCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize.zero
         layer.shadowRadius = 2
-        backgroundColor = UIColor.CHESSRED()
+        backgroundColor = UIColor.CHESSORANGE()
         
         addSubview(titleLabel)
         titleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 20)

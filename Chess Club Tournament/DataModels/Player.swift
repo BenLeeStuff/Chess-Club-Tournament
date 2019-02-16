@@ -36,6 +36,6 @@ class Player {
         self.lastPlayed = lastPlayed as? String ?? "none"
         self.opponentsPlayed = opponentsPlayed as? [String] ?? []
         self.totalDraws = totalDraws as? Int ?? 0
-        self.isSittingOut = self.isSittingOut ?? false
+        self.isSittingOut = isSittingOut 
     }
 }

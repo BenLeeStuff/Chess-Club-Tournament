@@ -336,9 +336,9 @@ class AddPlayerCardViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
 
         playerToAdd = Player(name: name, boardColor: "White", didWin: false, didLose: false, didDraw: false, place: nil, totalWins: Int(totalWins), totalLosses: Int(totalLosses), totalDraws: Int(totalDraws), totalScore: totalScore, scores: [], previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
-        
-        self.dismiss(animated: true, completion: nil)
         delegate?.addPlayerToTournament(player: playerToAdd!)
+
+        self.dismiss(animated: true, completion: nil)
     }
     
 

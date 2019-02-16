@@ -8,13 +8,18 @@
 
 import UIKit
 
+protocol TournamentViewControllerDelegate: class {
+    func showOverlay()
+    func clearResultsView()
+}
+
 class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate, MatchupResultsDelegate {
-
-
-
+    weak var delegate: TournamentViewControllerDelegate?
+    
     let cellId = "cellId"
     let matchupCellId = "matchupCellId"
     let sitOutCellId = "SitOutcellId"
+    var selectedIndexPath : IndexPath?
     
     var names: [String] = []
     var numberOfPairs = 0
@@ -115,28 +120,42 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         button.layer.cornerRadius = 5
         return button
     }()
-
+    
+    let overlay: UIView = {
+        let v = UIView()
+        v.backgroundColor = .black
+        v.alpha = 0.5
+        v.isHidden = true
+        return v
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+
         navigationItem.title = "Tournament"
         view.backgroundColor = UIColor.GRAY()
         currentRound = 1
         registerCells()
-        setupPlayers()
+        setupUI()
+        //setupPlayers()
+        print("PlayerCount: \(players.count)")
+        setPlayersSittingOut()
         setupMatchPairs(players: players)
+        updateAllPairsAndPlayersSittingOut()
         setColors()
         listMatchUps()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setupUI()
     }
     
     func setupUI() {
         //self.navigationItem.hidesBackButton = true
+        let margins = view.layoutMarginsGuide
+
         view.addSubview(topBar)
-        topBar.anchor(top: navigationController?.navigationBar.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 1, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 55)
+        topBar.anchor(top: margins.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 1, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 55)
         
         let topStackView = UIStackView(arrangedSubviews: [playersButton, leaderBoardButton, optionsButton])
         topStackView.distribution = .equalSpacing
@@ -156,7 +175,9 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         view.addSubview(collectionView)
         collectionView.anchor(top: roundLabel.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
-        collectionView.contentInset = UIEdgeInsets(top: 5,left: -10, bottom: 0,right: -10)
+        view.addSubview(overlay)
+        overlay.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        //collectionView.contentInset = UIEdgeInsets(top: ,left: 0, bottom: 0,right: 0)
 
         
     }
@@ -168,13 +189,33 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         collectionView.register(SitOutCollectionViewCell.self, forCellWithReuseIdentifier: sitOutCellId)
     }
     
-    func setupPlayers() {
-        for name in names {
-            if name != "" {
-                let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
-                players.append(player)
+    func showTournamentOverlay() {
+        self.overlay.isHidden = false
+        UIView.animate(withDuration: 0.35, animations: {
+            self.overlay.alpha = 0.5
+        }) { (true) in
+            self.overlay.isHidden = false
+        }
+    }
+    
+    func hideTournamentOverlay() {
+        UIView.animate(withDuration: 0.35, animations: {
+            self.overlay.alpha = 0
+        }) { (true) in
+            self.overlay.isHidden = true
+        }
+    }
+    
+    func setPlayersSittingOut() {
+        for index in stride(from: (players.count - 1), to: -1, by: -1) {
+            print("Index; \(index)")
+            if players[index].isSittingOut == true {
+                players[index].name = players[index].name!.replacingOccurrences(of: " (Sitting Out)", with: "")
+                playersSittingOut.append(players[index])
+                players.remove(at: index)
             }
         }
+
     }
     
     func setupMatchPairs(players: [Player]) {
@@ -191,7 +232,7 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
                     pair.append(player)
                     playerList.remove(at: randomIndex)
                 }
-                var matchPair = MatchPair(player1: nil, player2: nil, players: nil,  matchComplete: nil)
+                var matchPair = MatchPair(player1: nil, player2: nil, players: nil,  matchComplete: nil, winner: nil, loser: nil, draw: nil)
                 matchPair.player1 = pair[0]
                 matchPair.player2 = pair[1]
                 matchPairs.append(matchPair)
@@ -226,61 +267,100 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item <= (matchPairs.count - 1)  && matchPairs.count != 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: matchupCellId, for: indexPath) as! MatchupCollectionViewCell
-            cell.setAttributedText(matchPair: matchPairs[indexPath.item])
-            return cell
-            
+
+        if playersSittingOut.count > 0 {
+            if indexPath.item <= (matchPairs.count - 1) {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: matchupCellId, for: indexPath) as! MatchupCollectionViewCell
+                cell.matchPair = matchPairs[indexPath.item]
+                cell.setAttributedText(matchPair: matchPairs[indexPath.item])
+                cell.titleLabel.text = "Matchup \(indexPath.item)"
+                return cell
+
+            } else if indexPath.item > (matchPairs.count - 1) {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sitOutCellId, for: indexPath) as! SitOutCollectionViewCell
+                cell.player = playersSittingOut[indexPath.item - (matchPairs.count)] as! Player
+                    //cell.setAttributedText(player: playersSittingOut[indexPath.item - (matchPairs.count) ] as! Player)
+                
+                return cell
+            } else {
+                return UICollectionViewCell()
+            }
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sitOutCellId, for: indexPath) as! SitOutCollectionViewCell
-            
-            let playerSittingOut = allPairsAndPlayersSittingOut[indexPath.item] as! Player
-            cell.setAttributedText(player: playerSittingOut)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: matchupCellId, for: indexPath) as! MatchupCollectionViewCell
+            cell.matchPair = matchPairs[indexPath.item]
+            cell.setAttributedText(matchPair: matchPairs[indexPath.item])
+            cell.titleLabel.text = "Match \(indexPath.item + 1)"
             return cell
         }
-       
+    
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let matchupResultViewController = MatchupResultsViewController()
-        let pairs = matchPairs
-        matchupResultViewController.matchPair = pairs[indexPath.item]
-        matchupResultViewController.delegate = self
-        matchupResultViewController.currentIndex = indexPath.item
         
-        let player1Color = pairs[indexPath.item].player1!.boardColor!
-        
-        if player1Color == "White" {
-            matchupResultViewController.whiteWinButton.setTitle("\(pairs[indexPath.item].player1!.name!) Won", for: .normal)
-            matchupResultViewController.whiteWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
-            matchupResultViewController.whiteWinButton.setTitleColor(UIColor.BLACKCOLOR(), for: .normal)
+        if let cell = collectionView.cellForItem(at: indexPath) as? MatchupCollectionViewCell {
+            self.delegate = cell
             
-            matchupResultViewController.blackWinButton.setTitle("\(pairs[indexPath.item].player2!.name!) Won", for: .normal)
-            matchupResultViewController.blackWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
-            matchupResultViewController.blackWinButton.setTitleColor(UIColor.white, for: .normal)
-            print("JJJJJJJJJ")
-        } else if player1Color == "Black" {
-            matchupResultViewController.whiteWinButton.setTitle("\(pairs[indexPath.item].player2!.name!) Won", for: .normal)
-            matchupResultViewController.whiteWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
-            matchupResultViewController.whiteWinButton.setTitleColor(UIColor.BLACKCOLOR(), for: .normal)
+            let matchupResultViewController = MatchupResultsViewController()
+            matchupResultViewController.currentIndexPath = indexPath
+            selectedIndexPath = indexPath
+            matchupResultViewController.matchPair = matchPairs[indexPath.item]
+            matchupResultViewController.delegate = self
+            matchupResultViewController.currentIndex = indexPath.item
             
-            matchupResultViewController.blackWinButton.setTitle("\(pairs[indexPath.item].player1!.name!) Won", for: .normal)
-            matchupResultViewController.blackWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
-            matchupResultViewController.blackWinButton.setTitleColor(UIColor.white, for: .normal)
-            print("LLLLLLLLLL")
+            let pairs = matchPairs
+            let player1Color = pairs[indexPath.item].player1!.boardColor!
+            
+            if player1Color == "White" {
+                matchupResultViewController.whiteWinButton.setTitle("\(pairs[indexPath.item].player1!.name!) Won", for: .normal)
+                matchupResultViewController.whiteWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
+                matchupResultViewController.whiteWinButton.setTitleColor(UIColor.BLACKCOLOR(), for: .normal)
+                
+                matchupResultViewController.blackWinButton.setTitle("\(pairs[indexPath.item].player2!.name!) Won", for: .normal)
+                matchupResultViewController.blackWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
+                matchupResultViewController.blackWinButton.setTitleColor(UIColor.white, for: .normal)
+            } else if player1Color == "Black" {
+                matchupResultViewController.whiteWinButton.setTitle("\(pairs[indexPath.item].player2!.name!) Won", for: .normal)
+                matchupResultViewController.whiteWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
+                matchupResultViewController.whiteWinButton.setTitleColor(UIColor.BLACKCOLOR(), for: .normal)
+                
+                matchupResultViewController.blackWinButton.setTitle("\(pairs[indexPath.item].player1!.name!) Won", for: .normal)
+                matchupResultViewController.blackWinButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 18)
+                matchupResultViewController.blackWinButton.setTitleColor(UIColor.white, for: .normal)
+            } else {
+                print("Player 1 color: \(player1Color)")
+            }
+            
+            print(matchPairs[indexPath.item].player1!.name, matchPairs[indexPath.item].player1!.boardColor!, matchPairs[indexPath.item].player2!.name, matchPairs[indexPath.item].player2!.boardColor!)
+            navigationController?.pushViewController(matchupResultViewController, animated: true)
         } else {
-            print("Player 1 color: \(player1Color)")
+            if let cell = collectionView.cellForItem(at: indexPath) as?  SitOutCollectionViewCell {
+                let sittingOutViewController = SittingOutViewController()
+                
+                sittingOutViewController.modalPresentationStyle = .overCurrentContext
+                sittingOutViewController.tournamentViewController = self
+                sittingOutViewController.player = cell.player!
+                sittingOutViewController.numberOfRounds = self.numberOfRounds!
+                sittingOutViewController.currentRound = self.currentRound
+                sittingOutViewController.numberOfPlayersSittingOut = self.playersSittingOut.count
+                self.showTournamentOverlay()
+                navigationController?.present(sittingOutViewController, animated: true, completion: {
+                    
+                })
+                print("Player Sitting Out selected")
+            }
         }
-        
-        print(matchPairs[indexPath.item].player1!.name, matchPairs[indexPath.item].player1!.boardColor!, matchPairs[indexPath.item].player2!.name, matchPairs[indexPath.item].player2!.boardColor!)
-        navigationController?.pushViewController(matchupResultViewController, animated: true)
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("Matchpairs: \(matchPairs.count)")
         listMatchUps()
         return matchPairs.count + playersSittingOut.count
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 20, height: 115)
+        if indexPath.item <= matchPairs.count - 1{
+            return CGSize(width: collectionView.frame.width - 20, height: 135)
+        } else {
+            return CGSize(width: collectionView.frame.width - 20, height: 115)
+        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
@@ -290,9 +370,14 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         matchPairs[index] = matchPair
         matchPairs[index].matchComplete = true
         checkIfAllMatchComplete()
-        //collectionView.reloadData()
-    
+        delegate?.showOverlay()
     }
+    
+//    func animateCellOverlay(indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: selectedIndexPath!) as! MatchupCollectionViewCell
+//        cell.setResultText()
+//        cell.animateOverlay()
+//    }
     
     func checkIfAllMatchComplete() {
         let numberOfMatchPairs = matchPairs.count
@@ -320,6 +405,7 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
     
     func resetForNewRound() {
+        
         allMatchesComplete = false
         results.removeAll()
         playersInSameGroup.removeAll()
@@ -342,7 +428,6 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
 
     @objc func startNextRound() {
-        
         setResults()
         setPlayersWithSameWins()
         sortPlayersInSameGroup()
@@ -415,7 +500,50 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         print("")
     }
     
-    func showAlert(player: Player) {
+  
+    func addPlayerToTournament(player: Player) {
+        players.append(player)
+        print("Players COUNT: \(players.count)")
+        
+        let playerSittingOut = player
+        print("playerSittingOut: \(playerSittingOut.name)")
+        playersSittingOut.append(player)
+        
+        let index = matchPairs.count + playersSittingOut.count - 1
+        let indexPath = IndexPath(item: index, section: 0)
+        
+        collectionView.insertItems(at: [indexPath])
+    }
+    
+    func updateAllPairsAndPlayersSittingOut() {
+        allPairsAndPlayersSittingOut.removeAll()
+        for index in 0...matchPairs.count - 1  {
+            allPairsAndPlayersSittingOut.append(matchPairs[index])
+        }
+        if playersSittingOut.count != 0 {
+            for index in 0...playersSittingOut.count - 1 {
+                allPairsAndPlayersSittingOut.append(playersSittingOut[index])
+                
+            }
+        }
+        updatePlayers()
+    }
+    
+    func updatePlayers() {
+        players.removeAll()
+        for pair in matchPairs {
+            let player1 = pair.player1
+            let player2 = pair.player2
+            players.append(player1!)
+            players.append(player2!)
+        }
+        
+        for player in playersSittingOut {
+            players.append(player)
+        }
+    }
+    
+    func showPlayerAddedAlert(player: Player) {
         let name = player.name!
         let alert = UIAlertController(title: "Success!", message: "\(name) has been added!", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
@@ -428,46 +556,30 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         formatter.numberStyle = .ordinal
         let number = formatter.string(from: NSNumber(value: numberOfPlayers))
         let alert = UIAlertController(title: "Odd Number Of Players!", message: "Warning \(name) is the \(number!) player. By default, \(name) sits out, but you can pick the by in settings.", preferredStyle: UIAlertControllerStyle.alert)
+        
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
             // handle Ok
-            self.showAlert(player: player)
+            self.showPlayerAddedAlert(player: player)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) in
             // handle cancel
         }))
         self.present(alert, animated: true, completion: nil)
     }
     
-    func addPlayerToTournament(player: Player) {
-        print("Players COUNT: \(players.count)")
-        print("Player: \(player.name)")
-        
-        players.append(player)
-        print("Players COUNT: \(players.count)")
+    func showSitOutAlert(player: Player) {
+        let numberOfPlayersSittingOut = playersSittingOut.count
+        let name = player.name!
 
-        let playerCount = players.count
-        
-        if players.count % 2 != 0 { // Player has been added and he is the odd player
-            showOddPlayerAlert(player: player, numberOfPlayers: playerCount)
-            player.isSittingOut = true
-            playersSittingOut.append(player)
-            updateAllPairsAndPlayersSittingOut()
-            collectionView.reloadData()
-        } else { // There were an odd number of players before player was added
-            showAlert(player: player)
+        if numberOfPlayersSittingOut == 1 {
+            let alert = UIAlertController(title: "Put!", message: "\(name) has been added!", preferredStyle: .alert)
+            alert
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
-    func updateAllPairsAndPlayersSittingOut() {
-        for index in 0...matchPairs.count - 1  {
-            allPairsAndPlayersSittingOut.append(matchPairs[index])
-            
-        }
-        for index in 0...playersSittingOut.count - 1 {
-            allPairsAndPlayersSittingOut.append(playersSittingOut[index])
-
-        }
-        
-    }
+    
+    
+    
     
 }
