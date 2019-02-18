@@ -102,7 +102,7 @@ class SelectSitOutPlayerViewController: UIViewController, UICollectionViewDelega
             self.addPlayersViewController.players = self.players
             self.addPlayersViewController.collectionView.reloadItems(at: [indexPath])
             //self.addPlayersViewController.collectionView.reloadData()
-            
+
         }
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         alert.addAction(yes)

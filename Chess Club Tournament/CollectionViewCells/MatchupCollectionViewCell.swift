@@ -310,6 +310,12 @@ class MatchupCollectionViewCell: UICollectionViewCell, TournamentViewControllerD
         setResultText()
     }
     
+    func hideOverlay() {
+        overlay.isHidden = true
+        //resultOverlay.isHidden = true
+        resultOverlay.popOut(toScale: 0, duration: 0.5, delay: 0.5, completion: nil)
+    }
+    
     func clearResultsView() {
         overlay.isHidden = true
     }

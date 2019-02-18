@@ -8,15 +8,23 @@
 
 import UIKit
 
+protocol SittingOutDelegate: class {
+    func deletePlayerSittingOut(player: Player, indexPath: IndexPath)
+}
 class SittingOutViewController: UIViewController {
-    
+    weak var delegate: SittingOutDelegate?
     var tournamentViewController = TournamentViewController()
     var numberOfRounds: Int?
     var currentRound: Int?
     var numberOfPlayersSittingOut: Int?
     
     var playersSittingOut: [Player]?
-    
+    var playerIndexInAllPlayersAndPairs: Int? {
+        didSet {
+            print("IndexPath did set : \(playerIndexInAllPlayersAndPairs!)")
+        }
+    }
+
     var player: Player? {
         didSet {
             titleLabel.text = player!.name!
@@ -174,6 +182,7 @@ class SittingOutViewController: UIViewController {
             putInNextRoundDisabledLabel.isHidden = false
         }
     }
+
     
     @objc func handleCancel() {
         tournamentViewController.hideTournamentOverlay()
@@ -193,7 +202,12 @@ class SittingOutViewController: UIViewController {
             // need to implement remove action
             self.tournamentViewController.hideTournamentOverlay()
             self.dismiss(animated: true, completion: {
-                
+                let player = self.player!
+                //let indexPath = self.playerIndexPath!
+                let index = self.playerIndexInAllPlayersAndPairs! 
+                let indexPath = IndexPath(item: index, section: 0)
+                self.tournamentViewController.allPairsAndPlayersSittingOut.remove(at: index)
+                self.delegate?.deletePlayerSittingOut(player: player, indexPath: indexPath)
             })
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
@@ -202,11 +216,16 @@ class SittingOutViewController: UIViewController {
         alert.addAction(cancel)
         alert.addAction(removePlayer)
         self.present(alert, animated: true, completion: nil)
-
     }
     
     @objc func handlePairWithPlayer() {
-        
+        let playersSittingOutHolder = playersSittingOut!.filter { $0.name != player!.name! }
+        let playersViewController = PlayersViewController()
+        playersViewController.sittingOutViewController = self
+        playersViewController.players = playersSittingOutHolder
+        playersViewController.playerToMatch = player!
+        playersViewController.delegate = self.tournamentViewController
+        self.present(playersViewController, animated: true, completion: nil)
     }
 
     

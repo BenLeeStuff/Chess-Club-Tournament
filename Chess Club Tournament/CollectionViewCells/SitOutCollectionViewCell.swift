@@ -16,6 +16,7 @@ class SitOutCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    
     func setAttributedText(player: Player) -> NSMutableAttributedString {
         let name = player.name!
         let wins = player.totalWins!
