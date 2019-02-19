@@ -273,7 +273,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         if players.count == 0 {
             for name in playerNames {
                 
-                let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false, isWaiting: false, timesSatOut: 0)
                 players.append(player)
             }
         } else {
@@ -292,7 +292,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
             }
             
             for name in unsetPlayerNamesHolder {
-                let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false, isWaiting: false, timesSatOut: 0)
                 players.append(player)
             }
         }
@@ -305,11 +305,11 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
             for name in playerNames {
 
                 if name.range(of:"Sitting Out") != nil {
-                    let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: true)
+                    let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: true, isWaiting: false, timesSatOut: 1)
                     players.append(player)
 
                 } else {
-                    let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                    let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false, isWaiting: false, timesSatOut: 0)
                     players.append(player)
 
                 }
@@ -319,11 +319,11 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
                 if name != "" {
                     if name.contains("(Sitting Out)") {
                         print("YES")
-                        let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: true)
+                        let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: true, isWaiting: false, timesSatOut: 1)
                         players.append(player)
                         
                     } else {
-                        let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+                        let player = Player(name: name, boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore:0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false, isWaiting: false, timesSatOut: 0)
                         players.append(player)
                         
                     }
@@ -354,7 +354,7 @@ class AddPlayersViewController: UIViewController, UICollectionViewDataSource, UI
         setPlayers(blankOk: true)
         if players.count > 0 {
             numberOfPlayers! += 1
-            let player = Player(name: "", boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore: 0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false)
+            let player = Player(name: "", boardColor: nil, didWin: nil, didLose: nil, didDraw: nil, place: nil, totalWins: 0, totalLosses: 0, totalDraws: 0, totalScore: 0, scores: nil, previousColor: nil, lastPlayed: nil, opponentsPlayed: nil, isSittingOut: false, isWaiting: false, timesSatOut: 0)
             players.append(player)
             playerNames.append(player.name!)
             showAddPlayerButtonAlert()

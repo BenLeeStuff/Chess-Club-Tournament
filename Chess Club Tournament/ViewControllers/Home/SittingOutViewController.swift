@@ -17,17 +17,20 @@ class SittingOutViewController: UIViewController {
     var numberOfRounds: Int?
     var currentRound: Int?
     var numberOfPlayersSittingOut: Int?
-    
     var playersSittingOut: [Player]?
+    var matchPairs: [MatchPair]?
     var playerIndexInAllPlayersAndPairs: Int? {
         didSet {
             print("IndexPath did set : \(playerIndexInAllPlayersAndPairs!)")
         }
     }
+    
+    var playerIndexPathInCollectionView: IndexPath?
 
     var player: Player? {
         didSet {
             titleLabel.text = player!.name!
+            
         }
     }
     
@@ -182,6 +185,12 @@ class SittingOutViewController: UIViewController {
             putInNextRoundDisabledLabel.isHidden = false
         }
     }
+    
+    func disableWaitForNextRoundButton() {
+        putInNextRoundButton.alpha = 0.3
+        putInNextRoundButton.isEnabled = false
+        putInNextRoundDisabledLabel.isHidden = false
+    }
 
     
     @objc func handleCancel() {
@@ -189,13 +198,36 @@ class SittingOutViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @objc func handlePairWithPlayer() {
+        let playersSittingOutHolder = playersSittingOut!.filter { $0.name != player!.name! }
+        let playersViewController = PlayersViewController()
+        playersViewController.sittingOutViewController = self
+        playersViewController.players = playersSittingOutHolder
+        playersViewController.playerToMatch = player!
+        playersViewController.delegate = self.tournamentViewController
+        self.present(playersViewController, animated: true, completion: nil)
+    }
+    
     @objc func handlePutInNextRound() {
         
-        // need to put player in waiting mode.
+        let alert = UIAlertController(title: "Place in next round?", message: "This player will be matched next round.", preferredStyle: .actionSheet)
+        let yes = UIAlertAction(title: "Yes", style: .default) { (action) in
+            self.statusLabel.text = "Currently Waiting for next round"
+            self.player?.isWaiting = true
+            self.disableWaitForNextRoundButton()
+            self.putInNextRoundDisabledLabel.text = "This player is already wating for the next round."
+            self.tournamentViewController.putPlayerInWattingMode(player: self.player!, indexPath: self.playerIndexPathInCollectionView!)
+            self.tournamentViewController.hideTournamentOverlay()
+            self.dismiss(animated: true, completion: {
+            })
+        }
+        let no = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(yes)
+        alert.addAction(no)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func handleRemovePlayer() {
-        
         let name = player!.name!
         let alert = UIAlertController(title: "Remove \(name)? ", message: "Are you sure you want to remove \(name) from the tournament? This can't be undone.", preferredStyle: .actionSheet)
         let removePlayer = UIAlertAction(title: "Remove \(name)", style: .destructive) { (action) in
@@ -204,7 +236,7 @@ class SittingOutViewController: UIViewController {
             self.dismiss(animated: true, completion: {
                 let player = self.player!
                 //let indexPath = self.playerIndexPath!
-                let index = self.playerIndexInAllPlayersAndPairs! 
+                let index = self.playerIndexInAllPlayersAndPairs!
                 let indexPath = IndexPath(item: index, section: 0)
                 self.tournamentViewController.allPairsAndPlayersSittingOut.remove(at: index)
                 self.delegate?.deletePlayerSittingOut(player: player, indexPath: indexPath)
@@ -216,16 +248,6 @@ class SittingOutViewController: UIViewController {
         alert.addAction(cancel)
         alert.addAction(removePlayer)
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    @objc func handlePairWithPlayer() {
-        let playersSittingOutHolder = playersSittingOut!.filter { $0.name != player!.name! }
-        let playersViewController = PlayersViewController()
-        playersViewController.sittingOutViewController = self
-        playersViewController.players = playersSittingOutHolder
-        playersViewController.playerToMatch = player!
-        playersViewController.delegate = self.tournamentViewController
-        self.present(playersViewController, animated: true, completion: nil)
     }
 
     

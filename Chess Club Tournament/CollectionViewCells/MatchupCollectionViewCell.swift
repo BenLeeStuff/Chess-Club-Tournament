@@ -277,6 +277,8 @@ class MatchupCollectionViewCell: UICollectionViewCell, TournamentViewControllerD
             blackPlayer = matchPair.player1!
             
         } else {
+            whitePlayer = matchPair.player1!
+            blackPlayer = matchPair.player2!
             print("Something went wrong with the colors")
         }
         

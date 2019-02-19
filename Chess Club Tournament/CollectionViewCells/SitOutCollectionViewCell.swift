@@ -15,7 +15,17 @@ class SitOutCollectionViewCell: UICollectionViewCell {
             setAttributedText(player: player!)
         }
     }
-    
+    var isInWaitingMode: Bool? {
+        didSet {
+            if isInWaitingMode == true {
+                backgroundColor = UIColor.CHESSORANGE()
+                titleLabel.text = "Waiting For Next Round"
+            } else {
+                backgroundColor = UIColor.CHESSRED()
+                titleLabel.text = "Sitting Out"
+            }
+        }
+    }
     
     func setAttributedText(player: Player) -> NSMutableAttributedString {
         let name = player.name!
@@ -77,7 +87,7 @@ class SitOutCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize.zero
         layer.shadowRadius = 2
-        backgroundColor = UIColor.CHESSORANGE()
+        backgroundColor = UIColor.CHESSRED()
         
         addSubview(titleLabel)
         titleLabel.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 20)

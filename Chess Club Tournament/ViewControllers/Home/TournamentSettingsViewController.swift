@@ -84,7 +84,6 @@ class TournamentSettingViewController: UIViewController, UICollectionViewDelegat
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UICollectionViewCell
             return cell
-            
         }
     }
     
