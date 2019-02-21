@@ -89,7 +89,10 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
         if willPickPlayerToSitOut == true {
             let cell = collectionView.cellForItem(at: indexPath) as! PlayerCell
             let player = cell.player!
-            
+            self.dismiss(animated: true, completion: {
+                self.tournamentViewController.handlePlayerSelectedToSitOut(player: player)
+            })
+            //navigationController?.popViewController(animated: true)
         }
         if let sitOut = sittingOutViewController {
             let opponent = players![indexPath.item]

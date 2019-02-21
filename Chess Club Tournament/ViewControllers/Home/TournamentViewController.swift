@@ -607,7 +607,8 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
                     playersViewController.players = self.players
                     playersViewController.willPickPlayerToSitOut = true
                     playersViewController.tournamentViewController = self
-                    self.navigationController?.pushViewController(playersViewController, animated: true)
+                    self.present(playersViewController, animated: true, completion: nil)
+                    //self.navigationController?.pushViewController(playersViewController, animated: true)
                 })
                 let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                 alert.addAction(sitOutRandom)
@@ -665,7 +666,28 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
     
     func handlePlayerSelectedToSitOut(player: Player) {
+        setResults()
+        let playerSelectedToSitOut = player
+        let name = playerSelectedToSitOut.name!
+        playerSelectedToSitOut.isSittingOut = true
         
+        let resultsHolder = results.filter {$0.name != name}
+        results = resultsHolder
+        for index in 0...playersSittingOut.count - 1 {
+            let playerSittingOut =  playersSittingOut[index]
+            playerSittingOut.isWaiting = false
+            playerSittingOut.isSittingOut = false
+            results.append(playerSittingOut)
+        }
+        playersSittingOut.removeAll()
+        
+        playersSittingOut.append(player)
+        
+        self.setPlayersWithSameWins()
+        self.sortPlayersInSameGroup()
+        self.setColors()
+        self.hideMatchupResults()
+        self.resetForNewRound()
     }
 
     func showPlayerAddedAlert(player: Player) {
