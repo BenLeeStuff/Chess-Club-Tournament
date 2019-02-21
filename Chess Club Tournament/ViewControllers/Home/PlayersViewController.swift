@@ -15,8 +15,11 @@ protocol PlayersViewControllerDelegate: class {
 class PlayersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     weak var delegate: PlayersViewControllerDelegate?
     var tournamentViewController = TournamentViewController()
-
+    var willPickPlayerToSitOut = false
+    
     let sittingOutId = "SittingOutId"
+    let playerId = "playerId"
+
     var sittingOutViewController: SittingOutViewController? {
         didSet {
             print("Sitting out view controller did set")
@@ -60,9 +63,19 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func registerCells() {
         collectionView.register(PlayerCell.self, forCellWithReuseIdentifier: sittingOutId)
+        collectionView.register(PlayerCell.self, forCellWithReuseIdentifier: playerId)
+
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if willPickPlayerToSitOut == true {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: playerId, for: indexPath) as! PlayerCell
+            if let player = players?[indexPath.item] {
+                cell.player = player
+
+            }
+            return cell
+        }
         if let sittingOutVC = self.sittingOutViewController as? SittingOutViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sittingOutId, for: indexPath) as! PlayerCell
             cell.player = players![indexPath.item]
@@ -73,6 +86,11 @@ class PlayersViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if willPickPlayerToSitOut == true {
+            let cell = collectionView.cellForItem(at: indexPath) as! PlayerCell
+            let player = cell.player!
+            
+        }
         if let sitOut = sittingOutViewController {
             let opponent = players![indexPath.item]
             let plyrToMatch = self.playerToMatch!

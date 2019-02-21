@@ -603,6 +603,11 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
                 })
                 let pickSitOut = UIAlertAction(title: "Pick Who Sits Out", style: .default, handler: { (action) in
                     // handle pick sit out
+                    let playersViewController = PlayersViewController()
+                    playersViewController.players = self.players
+                    playersViewController.willPickPlayerToSitOut = true
+                    playersViewController.tournamentViewController = self
+                    self.navigationController?.pushViewController(playersViewController, animated: true)
                 })
                 let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
                 alert.addAction(sitOutRandom)
@@ -657,6 +662,10 @@ class TournamentViewController: UIViewController, UICollectionViewDelegateFlowLa
         let alert = UIAlertController(title: "Success!", message: "\(playerNameToDelete) has been removed!", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
         Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { _ in alert.dismiss(animated: true, completion: nil)} )
+    }
+    
+    func handlePlayerSelectedToSitOut(player: Player) {
+        
     }
 
     func showPlayerAddedAlert(player: Player) {
