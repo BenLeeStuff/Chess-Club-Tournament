@@ -82,6 +82,13 @@
 		7814E4E12201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E02201A8BE005D4B79 /* AddPlayerCollectionViewCell.swift */; };
 		7814E4E72202CEC1005D4B79 /* MatchupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */; };
 		7814E4E92202D50F005D4B79 /* MatchupResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */; };
+		78361415221E98ED00B596D0 /* PlayersDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78361414221E98ED00B596D0 /* PlayersDetailsViewController.swift */; };
+		783614572220C20300B596D0 /* RoundCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783614562220C20300B596D0 /* RoundCornersView.swift */; };
+		783614592220D62E00B596D0 /* CreateTournamentHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783614582220D62E00B596D0 /* CreateTournamentHomeCollectionViewCell.swift */; };
+		7836145B2220D9F000B596D0 /* ChessLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836145A2220D9F000B596D0 /* ChessLabel.swift */; };
+		7836145D2220E30E00B596D0 /* SwissTournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836145C2220E30E00B596D0 /* SwissTournamentCollectionViewCell.swift */; };
+		7836145F2220EF5200B596D0 /* TournamentHistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836145E2220EF5200B596D0 /* TournamentHistoryCollectionViewCell.swift */; };
+		7836146122210DBE00B596D0 /* PreviousTournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836146022210DBE00B596D0 /* PreviousTournamentCollectionViewCell.swift */; };
 		783A9B24220D6AE3003B3794 /* TournamentPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A9B23220D6AE3003B3794 /* TournamentPlayersViewController.swift */; };
 		783A9B26220D6C6C003B3794 /* TournamentSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A9B25220D6C6C003B3794 /* TournamentSettingsViewController.swift */; };
 		783A9B28220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A9B27220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift */; };
@@ -160,6 +167,13 @@
 		7814E4E42201B17C005D4B79 /* TournamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentViewController.swift; sourceTree = "<group>"; };
 		7814E4E62202CEC1005D4B79 /* MatchupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchupCollectionViewCell.swift; sourceTree = "<group>"; };
 		7814E4E82202D50F005D4B79 /* MatchupResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchupResultsViewController.swift; sourceTree = "<group>"; };
+		78361414221E98ED00B596D0 /* PlayersDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersDetailsViewController.swift; sourceTree = "<group>"; };
+		783614562220C20300B596D0 /* RoundCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornersView.swift; sourceTree = "<group>"; };
+		783614582220D62E00B596D0 /* CreateTournamentHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTournamentHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		7836145A2220D9F000B596D0 /* ChessLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessLabel.swift; sourceTree = "<group>"; };
+		7836145C2220E30E00B596D0 /* SwissTournamentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissTournamentCollectionViewCell.swift; sourceTree = "<group>"; };
+		7836145E2220EF5200B596D0 /* TournamentHistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentHistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7836146022210DBE00B596D0 /* PreviousTournamentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousTournamentCollectionViewCell.swift; sourceTree = "<group>"; };
 		783A9B23220D6AE3003B3794 /* TournamentPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentPlayersViewController.swift; sourceTree = "<group>"; };
 		783A9B25220D6C6C003B3794 /* TournamentSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentSettingsViewController.swift; sourceTree = "<group>"; };
 		783A9B27220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerToTournamentCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -248,6 +262,8 @@
 				7814E484220191FA005D4B79 /* CollectionViewCells */,
 				7814E483220191ED005D4B79 /* ViewControllers */,
 				7814E4812201917C005D4B79 /* Extensions.swift */,
+				783614562220C20300B596D0 /* RoundCornersView.swift */,
+				7836145A2220D9F000B596D0 /* ChessLabel.swift */,
 				7814E45722019116005D4B79 /* Main.storyboard */,
 				7814E45A22019116005D4B79 /* Assets.xcassets */,
 				7814E45C22019116005D4B79 /* LaunchScreen.storyboard */,
@@ -286,6 +302,10 @@
 		7814E484220191FA005D4B79 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				783614582220D62E00B596D0 /* CreateTournamentHomeCollectionViewCell.swift */,
+				7836145C2220E30E00B596D0 /* SwissTournamentCollectionViewCell.swift */,
+				7836145E2220EF5200B596D0 /* TournamentHistoryCollectionViewCell.swift */,
+				7836146022210DBE00B596D0 /* PreviousTournamentCollectionViewCell.swift */,
 				7814E48622019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift */,
 				7814E4DC2201A7F1005D4B79 /* PlayerCollectionViewCell.swift */,
 				7814E4DE2201A810005D4B79 /* NoPlayerCollectionViewCell.swift */,
@@ -348,6 +368,7 @@
 				783A9B23220D6AE3003B3794 /* TournamentPlayersViewController.swift */,
 				78AC1FE92210F4D2008E5B12 /* DeletePlayerViewController.swift */,
 				789FD48A221A850C0023B967 /* PlayersViewController.swift */,
+				78361414221E98ED00B596D0 /* PlayersDetailsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -644,8 +665,10 @@
 				78AC1FEA2210F4D2008E5B12 /* DeletePlayerViewController.swift in Sources */,
 				7814E48722019233005D4B79 /* CreateRegularTournamentCollectionViewCell.swift in Sources */,
 				7814E45622019116005D4B79 /* HomeViewController.swift in Sources */,
+				7836145D2220E30E00B596D0 /* SwissTournamentCollectionViewCell.swift in Sources */,
 				7814E4D722019B6C005D4B79 /* TextField.swift in Sources */,
 				783A9B26220D6C6C003B3794 /* TournamentSettingsViewController.swift in Sources */,
+				7836145F2220EF5200B596D0 /* TournamentHistoryCollectionViewCell.swift in Sources */,
 				78AC1FE2221018B0008E5B12 /* TournamentViewController.swift in Sources */,
 				783A9B2A220DF47F003B3794 /* AddPlayerCardViewController.swift in Sources */,
 				7814E4D422019B31005D4B79 /* CreateTournamentOptionsViewController.swift in Sources */,
@@ -655,10 +678,15 @@
 				789FD48B221A850C0023B967 /* PlayersViewController.swift in Sources */,
 				78AC1FEC2210F8B6008E5B12 /* DeletePlayerCollectionViewCell.swift in Sources */,
 				7814E4E72202CEC1005D4B79 /* MatchupCollectionViewCell.swift in Sources */,
+				7836145B2220D9F000B596D0 /* ChessLabel.swift in Sources */,
+				783614592220D62E00B596D0 /* CreateTournamentHomeCollectionViewCell.swift in Sources */,
+				783614572220C20300B596D0 /* RoundCornersView.swift in Sources */,
 				7814E4E92202D50F005D4B79 /* MatchupResultsViewController.swift in Sources */,
+				7836146122210DBE00B596D0 /* PreviousTournamentCollectionViewCell.swift in Sources */,
 				7814E45422019116005D4B79 /* AppDelegate.swift in Sources */,
 				783A9B28220D6D93003B3794 /* AddPlayerToTournamentCollectionViewCell.swift in Sources */,
 				7814E4DB2201A6A9005D4B79 /* MatchPair.swift in Sources */,
+				78361415221E98ED00B596D0 /* PlayersDetailsViewController.swift in Sources */,
 				7814E4D222019AB0005D4B79 /* AddPlayersViewController.swift in Sources */,
 				783A9B24220D6AE3003B3794 /* TournamentPlayersViewController.swift in Sources */,
 				789279432217E55300F5E7F8 /* SittingOutViewController.swift in Sources */,
